@@ -1,11 +1,46 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.http import HttpResponse
+from django import template
+from django.template import loader
 from .forms import LoginForm, SignUpForm
 
 def index(request):
     return render(request, "index.html")
 
+def error_404(request):
+    return render(request, "error-404.html")
+
+def error_500(request):
+    return render(request, "error-500.html")
+
+def examples(request):
+    context = {}
+    # All resource paths end in .html.
+    # Pick out the html file name from the url. And load that template.
+    try:
+        load_template = request.path.split('/')[-1]
+        html_template = loader.get_template( f'examples/{load_template}' )
+        return HttpResponse(html_template.render(context, request))
+        
+    except template.TemplateDoesNotExist:
+
+        html_template = loader.get_template( 'error-404.html' )
+        return HttpResponse(html_template.render(context, request))
+
+    except:
+    
+        html_template = loader.get_template( 'error-500.html' )
+        return HttpResponse(html_template.render(context, request))    
+'''
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
+@login_required(login_url="/login/")
+def index(request):
+    return render(request, "index.html")
+@login_required(login_url="/login/")
+'''
 def login_view(request):
     form = LoginForm(request.POST or None)
 
