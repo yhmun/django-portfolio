@@ -3,6 +3,11 @@
 $ docker-compose build                  # Build or rebuild services.
 ```
 
+### Pull
+```
+$ docker-compose pull                   # Pulls images for services defined in a Compose file, but does not start the containers.
+```
+
 ### Execute
 ```
 $ docker-compose exec                   # Execute a command in a running container
@@ -21,13 +26,13 @@ $ docker-compose up --no-build
 $ docker-compose up --no-start
 $ docker-compose up -d postgres
 $ docker-compose up portfolio
-$ docker-compose -f docker-compose.prod.yml up -d
+$ docker-compose up -d
 ```
 ```
 $ docker-compose down                   # Stops containers and removes containers, networks, volumes, and images created by `up`.
 $ docker-compose down --rmi all
 $ docker-compose down --rmi local
-$ docker-compose -f docker-compose.prod.yml down --rmi all
+$ docker-compose down --rmi all
 ```
 ```
 $ docker-compose stop                   # Stop running containers without removing them.
