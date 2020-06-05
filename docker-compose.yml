@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   portfolio:
-    image: mcodegeeks/portfolio:custom
+    image: mcodegeeks/portfolio:latest
     container_name: portfolio
     restart: unless-stopped
     networks:
@@ -31,7 +31,7 @@ services:
     env_file:
       - .env.postgres
   nginx:
-    image: mcodegeeks/nginx:custom
+    image: mcodegeeks/nginx:latest
     container_name: nginx
     restart: unless-stopped
     networks:

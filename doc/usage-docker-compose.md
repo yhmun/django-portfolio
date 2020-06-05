@@ -7,8 +7,8 @@ $ docker-compose build                  # Build or rebuild services.
 ```
 $ docker-compose exec                   # Execute a command in a running container
 $ docker-compose exec portfolio /bin/bash
-$ docker-compose exec portfolio python manage.py createsuperuser
-$ docker-compose exec portfolio python manage.py migrate
+$ docker-compose exec portfolio ./manage.py createsuperuser
+$ docker-compose exec portfolio ./manage.py migrate
 $ docker-compose exec postgres psql --username='postgres' --dbname='portfolio'
 $ docker-compose exec nginx ls /var/www
 ```
