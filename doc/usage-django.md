@@ -96,3 +96,9 @@ TIME_ZONE = env('TIME_ZONE')
 ```
 (venv) $ ./manage.py runserver
 ``` 
+
+### Creating your own app
+```
+(venv) $ ./manage.py startapp main
+```
+
