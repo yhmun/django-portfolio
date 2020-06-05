@@ -44,6 +44,7 @@ $ source venv/bin/activate
        - pip install asgiref                # ASGI specs, helper code, and adapters
        - pip install pytz                   # World timezone definitions, modern and historical
        - pip install sqlparse               # Non-validating SQL parser
+(venv) $ pip install django-environ         # Django-environ allows you to utilize 12factor inspired environment variables to configure your Django application.
 (venv) $ pip install psycopg2-binary        # psycopg2 - Python-PostgreSQL Database Adapter
 (venv) $ pip install djangorestframework    # Web APIs for Django, made easy.
 (venv) $ pip install Pillow                 # Python Imaging Library (Fork)
@@ -56,4 +57,42 @@ $ source venv/bin/activate
 (venv) $ django-admin startproject portfolio .
 ```
 
+### Changing App Settings
+```
+(venv) $ vi app/settings.py
+...
+import environ
 
+env = environ.Env(
+    DEBUG=(bool, False)
+)
+environ.Env.read_env()
+
+DEBUG = env('DEBUG')
+
+SECRET_KEY = env('SECRET_KEY')
+
+ALLOWED_HOSTS = env('DJANGO_ALLOWED_HOSTS').split(' ')
+
+DATABASES = {
+    'default': env.db()
+}
+
+TIME_ZONE = env('TIME_ZONE')
+...
+```
+
+### Database Migration
+```
+(venv) $ python manage.py makemigrations <app>
+(venv) $ python manage.py sqlmigrate <app> 0001
+(venv) $ python manage.py migrate
+(venv) $ python manage.py showmigrations
+(venv) $ python manage.py migrate --fake <app> zero
+(venv) $ python manage.py migrate <app> zero
+```
+
+### The development server
+```
+(venv) $ ./manage.py runserver
+``` 

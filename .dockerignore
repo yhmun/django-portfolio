@@ -2,10 +2,11 @@
 .gitignore
 .dockerignore
 .env
-.env.db
+.env.*
 sftp-config.json
 Dockerfile
-docker-compose*.yml
+docker-compose.yml
+docker-compose.*.yml
 README.md
 LICENSE
 __pycache__/

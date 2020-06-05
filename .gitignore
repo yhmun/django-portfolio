@@ -1,5 +1,5 @@
 .env
-.env.db
+.env.*
 db.sqlite3
 sftp-config.json
 __pycache__/
