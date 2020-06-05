@@ -1,12 +1,28 @@
 version: '3.5'
 
 services:
+  portfolio:
+    image: mcodegeeks/portfolio:custom
+    container_name: portfolio
+    restart: unless-stopped
+    networks:
+      - postgres_network
+      - nginx_network
+    ports:
+      - 8000:8000
+    volumes:
+      - static_volume:/var/www/staticfiles/
+      - media_volume:/var/www/mediafiles/      
+    env_file:
+      - .env
+    depends_on:
+      - postgres
   postgres:
     image: postgres:13-alpine
     container_name: postgres
     restart: unless-stopped
     networks:
-      - postgres_network    
+      - postgres_network
     ports:
       - "54320:5432"
       - "5432:5432"
@@ -14,10 +30,27 @@ services:
       - postgres_volume:/var/lib/postgresql/data/
     env_file:
       - .env.postgres
+  nginx:
+    image: mcodegeeks/nginx:custom
+    container_name: nginx
+    restart: unless-stopped
+    networks:
+      - nginx_network
+    ports:
+      - 80:80
+    volumes:
+      - static_volume:/var/www/staticfiles/
+      - media_volume:/var/www/mediafiles/
+    depends_on:
+      - portfolio
 
 volumes:
   postgres_volume:
+  static_volume:
+  media_volume:
 
 networks:
   postgres_network:
+    driver: bridge
+  nginx_network:
     driver: bridge
