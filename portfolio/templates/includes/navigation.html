@@ -1,5 +1,6 @@
 
       <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
+        <!-- Left Menu -->
         <button class="c-header-toggler c-class-toggler d-lg-none mr-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
           <span class="c-header-toggler-icon"></span>
         </button>
@@ -7,11 +8,8 @@
           <span class="c-header-toggler-icon"></span>
         </button>
         <ul class="c-header-nav d-md-down-none">
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="{% url 'main:index' %}">Dashboard</a></li>
-          <!--
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Users</a></li>
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
-          -->
+          <li class="c-header-nav-item px-2"><a class="c-header-nav-link" href="{% url 'main:index' %}">Dashboard</a></li>
+          <li class="c-header-nav-item px-2"><a class="c-header-nav-link" href="{% url 'projects:project-list' %}">Projects</a></li>
         </ul>
         <!-- Right Menu -->
         <ul class="c-header-nav ml-auto mr-4">
@@ -114,12 +112,9 @@
           {% endif %}
         </ul>
         <div class="c-subheader px-3">
-          <!-- Breadcrumb-->
           <ol class="breadcrumb border-0 m-0">
             <li class="breadcrumb-item">Home</li>
-            <!-- <li class="breadcrumb-item"><a href="#">Admin</a></li> -->
             <li class="breadcrumb-item active">Dashboard</li>
-            <!-- Breadcrumb Menu-->
           </ol>
         </div>
       </header>

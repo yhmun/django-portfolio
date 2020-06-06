@@ -13,6 +13,12 @@
             </svg> Dashboard
           </a>
         </li>
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{% url 'projects:project-list' %}" target="_top">
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-tablet"></use>
+            </svg> Projects
+          </a>
+        </li>
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{% url 'main:register' %}" target="_top">
             <svg class="c-sidebar-nav-icon">
               <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-user-follow"></use>
@@ -36,6 +42,13 @@
           </a>
         </li>
         {% endif %}
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="/admin" >
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-bug"></use>
+            </svg> Admin
+          </a>
+        </li>
         <li class="c-sidebar-nav-title">Core UI</li>
         <li class="c-sidebar-nav-item">
           <a class="c-sidebar-nav-link" href="/examples/page-colors.html">
