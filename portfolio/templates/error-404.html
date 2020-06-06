@@ -1,22 +1,26 @@
-{% extends "layouts/base-fullscreen.html" %}
-
-{% block title %} Login {% endblock %}
+{% extends "layouts/base.html" %}
+{% block title %} Error 404 {% endblock %} 
 
 {% block content %}
-
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-          
-            <div class="clearfix">
-                <h1 class="float-left display-3 mr-4">404</h1>
-                <h4 class="pt-3">Oops! You're lost.</h4>
-                <p class="text-muted">
-                    The page you are looking for was not found - <a href="/"> Home </a>
-                </p>
-            </div>    
-
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-header"> Error 404
+      </div>
+      <div class="card-body">
+        <div class="jumbotron text-center">
+            <p class="pt-4"></p>
+            <p class="pt-4"></p>
+            <h2 class="pt-4">Oops! You're lost.</h4>
+            <p class="text-muted h5 pt-4">
+                The page you are looking for was not found.
+            </p>
+            <p class="pt-4"></p>
+            <p class="pt-4"></p>
+            <p class="pt-4"></p>
         </div>
-        
+      </div>
     </div>
-
+  </div>
+</div>
 {% endblock content %}
