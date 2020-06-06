@@ -9,14 +9,14 @@
     <li class="c-sidebar-nav-title">Main App</li>
 
     <li class="c-sidebar-nav-item">
-      <a class="c-sidebar-nav-link" href="{% url 'index' %}">
+      <a class="c-sidebar-nav-link" href="{% url 'main:index' %}">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
         </svg> Dashboard
       </a>
     </li>
 
-    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{% url 'register' %}" target="_top">
+    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{% url 'main:register' %}" target="_top">
         <svg class="c-sidebar-nav-icon">
           <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-user-follow"></use>
         </svg> Register
@@ -25,7 +25,7 @@
 
     {% if user.is_authenticated %}
       <li class="c-sidebar-nav-item">
-        <a class="c-sidebar-nav-link" href="{% url 'logout' %}" >
+        <a class="c-sidebar-nav-link" href="{% url 'main:logout' %}" >
           <svg class="c-sidebar-nav-icon">
             <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
           </svg> Logout
@@ -33,7 +33,7 @@
       </li>
     {% else %}
       <li class="c-sidebar-nav-item">
-        <a class="c-sidebar-nav-link" href="{% url 'login' %}" >
+        <a class="c-sidebar-nav-link" href="{% url 'main:login' %}" >
           <svg class="c-sidebar-nav-icon">
             <use xlink:href="/static/assets/vendors/@coreui/icons/svg/free.svg#cil-exit-to-app"></use>
           </svg> Login
