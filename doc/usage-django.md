@@ -84,12 +84,12 @@ TIME_ZONE = env('TIME_ZONE')
 
 ### Database Migration
 ```
-(venv) $ python manage.py makemigrations <app>
-(venv) $ python manage.py sqlmigrate <app> 0001
-(venv) $ python manage.py migrate
-(venv) $ python manage.py showmigrations
-(venv) $ python manage.py migrate --fake <app> zero
-(venv) $ python manage.py migrate <app> zero
+(venv) $ ./manage.py makemigrations <app>
+(venv) $ ./manage.py sqlmigrate <app> 0001
+(venv) $ ./manage.py migrate
+(venv) $ ./manage.py showmigrations
+(venv) $ ./manage.py migrate --fake <app> zero
+(venv) $ ./manage.py migrate <app> zero
 ```
 
 ### The development server
@@ -102,3 +102,39 @@ TIME_ZONE = env('TIME_ZONE')
 (venv) $ ./manage.py startapp main
 ```
 
+### Creating an admin user
+```
+(venv) $ ./manage.py createsuperuser
+```
+
+### Collect static files
+```
+(venv) $ ./manage.py collectstatic
+```
+
+### Shell
+```
+>>> from polls.models import Choice, Question
+
+>>> Question.objects.all()
+
+>>> from django.utils import timezone
+>>> q = Question(question_text="What's new?", pub_date=timezone.now())
+>>> q.save()
+
+>>> Question.objects.filter(id=1)
+>>> Question.objects.filter(question_text__startswith='What')
+
+>>> Question.objects.get(pk=1)
+
+>>> q.choice_set.all()
+>>> q.choice_set.create(choice_text='The sky', votes=0)
+>>> q.choice_set.count()
+>>> c.delete()
+```
+
+### curl command
+```
+(venv) $ curl -sS http://127.0.0.1:8000/receipts/ | python -m json.tool
+(venv) $ curl -H "Content-Type: application/json" http://localhost:8000/receipts -d '{}'
+```

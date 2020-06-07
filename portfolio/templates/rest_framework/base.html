@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% load i18n %}
+{% load rest_framework %}
+
+{% block title %} REST APIs {% endblock title %} 
+{% block content %}
+          <div class="container-fluid">
+            <div class="fade-in">
+              <div class="card">
+                <div class="card-header">
+                  <strong>REST API: {{ name }}</strong>
+                </div>
+                <div class="card-body">
+                  <div>{{ description }}</div>
+
+                  <div class="content-main" role="main"  aria-label="{% trans 'main content' %}">
+    
+
+                    <div class="response-info" aria-label="{% trans "response info" %}">
+                      <pre class="prettyprint"><span class="meta nocode"><b>HTTP {{ response.status_code }} {{ response.status_text }}</b>{% for key, val in response_headers|items %}
+<b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize_quoted_links }}</span>{% endfor %}
+
+</span>{{ content|urlize_quoted_links }}</pre>
+                    </div>
+                  </div>
+
+
+                  {% if paginator %}
+                  <nav class="navbar-light" style="float:right">
+                    {% get_pagination_html paginator %}
+                  </nav>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+{% endblock content %}

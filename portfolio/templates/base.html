@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Django Application">
+    <meta name="author" content="Mun, Younghwan">
+    <meta name="keyword" content="Django,Bootstrap">
+
+    <title>Hey, CodeGeeks! - {% block title %}{% endblock title %}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/static/assets/img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/static/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+  </head>
+  <body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+{% include 'navbar.html' %}
+{% include 'option.html' %}
+      <div class="app-main">
+{% include 'sidebar.html' %}
+        <div class="app-main__outer">{% block content %}{% endblock content %}{% include 'footer.html' %}
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/static/assets/js/common.js"></script>
+  </body>
+</html>
