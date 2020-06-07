@@ -32,14 +32,25 @@
           <div class="app-header-left">
             <ul class="header-menu nav">
               <li class="btn-group nav-item">
+                <a href="{% url 'main:index' %}" class="nav-link">
+                  <i class="nav-link-icon fa fa-home"></i>Home
+                </a>
+              </li>
+              <li class="btn-group nav-item">
                 <a href="{% url 'projects:project-list' %}" class="nav-link">
                   <i class="nav-link-icon fa fa-cube"></i>Projects
                 </a>
               </li>
               <li class="btn-group nav-item">
-                <a href="/api/v1" class="nav-link">
-                  <i class="nav-link-icon fa fa-database"></i>REST APIs
-                </a>
+                <div class="btn-group">
+                  <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="nav-link-icon fa fa-database"></i>REST APIs
+                  </a>
+                  <ul class="dropdown-menu">
+                    <a class="dropdown-item" href="/api/v1">API Root</a>
+                    <a class="dropdown-item" href="/api/v1/projects">Project List</a>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>

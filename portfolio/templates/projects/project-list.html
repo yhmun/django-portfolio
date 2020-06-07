@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block content %}
+{% block title %} Projects {% endblock title %} 
+{% block app_content %}
           <div class="app-main__inner">
             <div class="app-page-title">
               <div class="page-title-wrapper">
@@ -16,20 +17,20 @@
             </div>
             <div class="row">
               {% for project in object_list %}
-                <div class="col-sm-4 col-md-3 mb-4">
+                <div class="col-sm-4 col-md-3 mb-4">                  
                   <div class="card card-shadow-info border border-info">
-                    <img class="card-img-top" src="{{ project.image.url }}" alt="Card image">
-                    <div class="card-body">                      
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <img class="card-img-top embed-responsive-item" src="{{ project.image.url }}" alt="Card image">
+                    </div>
+                    <div class="card-body">
                       <h5 class="card-title">{{ project.title }}</h5>
-                      <p style="height: 40px;">{{ project.description }}</p>                      
-                      <div class="row">
-                        <div class="col"><small>{{ project.framework }}</small></div>
-                        <div class="col text-right"><a href="#" class="btn btn-info" style='width: 100px'>Read More</a></div>
-                      </div>
+                      <p style="height: 40px;">{{ project.description }}</p>                  
+                        <div class="col text-right mb-1"><small>{{ project.framework }}</small></div>
+                        <div class="col text-right"><a href="#" class="btn btn-info" style='width: 100px'>Read More</a></div>                      
                     </div>
                   </div>
                 </div>
               {% endfor %}
             </div>
           </div>
-{% endblock content %}
+{% endblock app_content %}

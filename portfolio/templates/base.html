@@ -26,11 +26,12 @@
 {% include 'includes/option.html' %}
       <div class="app-main">
 {% include 'includes/sidebar.html' %}
-        <div class="app-main__outer">{% block content %}{% endblock content %}{% include 'includes/footer.html' %}
+        <div class="app-main__outer">{% block app_content %}{% endblock app_content %}{% include 'includes/footer.html' %}
         </div>
       </div>
     </div>
     <script type="text/javascript" src="/static/assets/js/common.js"></script>
+{% block script %}{% endblock script %}
   </body>
 </html>
 {% block modal %}{% endblock modal %}
