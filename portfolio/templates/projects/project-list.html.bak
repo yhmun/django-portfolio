@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+{% block title %} Projects {% endblock title %} 
+{% block content %}
+          <div class="container-fluid">
+            <div class="fade-in">
+              <div class="row">
+                {% for project in object_list %}
+                <div class="col-sm-4 col-md-3 pb-4">
+                  <div class="card border-info h-100">
+                    <img class="card-img-top" src="{{ project.image.url }}" alt="Card image">
+                    <div class="card-header">
+                      <strong>{{ project.title }}</strong>
+                    </div>
+                    <div class="card-body">{{ project.description }}</div>
+                    <div class="card-body text-right">
+                      <div class="mb-2"><small>{{ project.framework }}</small></div>
+                      <div><a href="#" class="btn btn-info">Read More</a></div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+{% endblock content %}

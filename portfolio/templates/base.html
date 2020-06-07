@@ -22,11 +22,11 @@
   </head>
   <body>
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-{% include 'navbar.html' %}
-{% include 'option.html' %}
+{% include 'includes/navbar.html' %}
+{% include 'includes/option.html' %}
       <div class="app-main">
-{% include 'sidebar.html' %}
-        <div class="app-main__outer">{% block content %}{% endblock content %}{% include 'footer.html' %}
+{% include 'includes/sidebar.html' %}
+        <div class="app-main__outer">{% block content %}{% endblock content %}{% include 'includes/footer.html' %}
         </div>
       </div>
     </div>

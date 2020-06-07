@@ -1,25 +1,35 @@
-{% extends "layouts/base.html" %}
-{% block title %} Projects {% endblock title %} 
+{% extends "base.html" %}
 {% block content %}
-          <div class="container-fluid">
-            <div class="fade-in">
-              <div class="row">
-                {% for project in object_list %}
-                <div class="col-sm-4 col-md-3 pb-4">
-                  <div class="card border-info h-100">
+          <div class="app-main__inner">
+            <div class="app-page-title">
+              <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                  <div class="font-icon-wrapper font-icon-lg">
+                    <i class="pe-7s-box2 icon-gradient bg-amy-crisp"></i>
+                  </div>
+                <div>
+                  Project List
+                  <div class="page-title-subheading">Currently, there are only sample projects.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              {% for project in object_list %}
+                <div class="col-sm-4 col-md-3 mb-4">
+                  <div class="card card-shadow-info border border-info">
                     <img class="card-img-top" src="{{ project.image.url }}" alt="Card image">
-                    <div class="card-header">
-                      <strong>{{ project.title }}</strong>
-                    </div>
-                    <div class="card-body">{{ project.description }}</div>
-                    <div class="card-body text-right">
-                      <div class="mb-2"><small>{{ project.framework }}</small></div>
-                      <div><a href="#" class="btn btn-info">Read More</a></div>
+                    <div class="card-body">                      
+                      <h5 class="card-title">{{ project.title }}</h5>
+                      <p style="height: 40px;">{{ project.description }}</p>                      
+                      <div class="row">
+                        <div class="col"><small>{{ project.framework }}</small></div>
+                        <div class="col text-right"><a href="#" class="btn btn-info" style='width: 100px'>Read More</a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                {% endfor %}
-              </div>
+              {% endfor %}
             </div>
           </div>
 {% endblock content %}
