@@ -32,8 +32,13 @@
           <div class="app-header-left">
             <ul class="header-menu nav">
               <li class="btn-group nav-item">
-                <a href="javascript:void(0);" class="nav-link">
+                <a href="{% url 'projects:project-list' %}" class="nav-link">
                   <i class="nav-link-icon fa fa-cube"></i>Projects
+                </a>
+              </li>
+              <li class="btn-group nav-item">
+                <a href="/api/v1" class="nav-link">
+                  <i class="nav-link-icon fa fa-database"></i>REST APIs
                 </a>
               </li>
             </ul>

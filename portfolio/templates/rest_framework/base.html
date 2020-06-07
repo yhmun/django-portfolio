@@ -1,38 +1,102 @@
-{% extends "layouts/base.html" %}
-{% load static %}
-{% load i18n %}
+{% extends "base.html" %}
 {% load rest_framework %}
-
-{% block title %} REST APIs {% endblock title %} 
 {% block content %}
-          <div class="container-fluid">
-            <div class="fade-in">
-              <div class="card">
-                <div class="card-header">
-                  <strong>REST API: {{ name }}</strong>
-                </div>
-                <div class="card-body">
-                  <div>{{ description }}</div>
-
-                  <div class="content-main" role="main"  aria-label="{% trans 'main content' %}">
-    
-
-                    <div class="response-info" aria-label="{% trans "response info" %}">
-                      <pre class="prettyprint"><span class="meta nocode"><b>HTTP {{ response.status_code }} {{ response.status_text }}</b>{% for key, val in response_headers|items %}
-<b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize_quoted_links }}</span>{% endfor %}
-
-</span>{{ content|urlize_quoted_links }}</pre>
+          <div class="app-main__inner">
+            <div class="app-page-title">
+              <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                  <div class="font-icon-wrapper font-icon-lg">
+                    <i class="fa fa-database icon-gradient bg-arielle-smile"></i>
+                  </div>
+                  <div>
+                    Django REST Framework
+                    <div class="page-title-subheading">
+                      REST framework provides built-in support for generating OpenAPI schemas, which can be used with tools that allow you to build API documentation.
                     </div>
                   </div>
-
-
-                  {% if paginator %}
-                  <nav class="navbar-light" style="float:right">
-                    {% get_pagination_html paginator %}
-                  </nav>
-                  {% endif %}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <nav class="" aria-label="breadcrumb">
+                  <ul class="breadcrumb">
+                  {% for breadcrumb_name, breadcrumb_url in breadcrumblist %}
+                    {% if forloop.last %}
+                    <li class="active breadcrumb-item" aria-current="page">{{ breadcrumb_name }}</li>
+                    {% else %}
+                    <li class="breadcrumb-item"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                  </ul>
+                </nav>
+                <div class="main-card mb-3 card">
+                  <div class="card-header">
+                    <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>{{ name }}
+                    <div class="btn-actions-pane-right">
+                      <div class="nav">
+                      {% if delete_form %}
+                        <button class="btn btn-danger button-form js-tooltip mt-1 mb-2" title="Make a DELETE request on the {{ name }} resource" data-toggle="modal" data-target="#deleteModal">DELETE</button>
+                      {% endif %}
+                      {% if options_form %}
+                        <form class="button-form ml-2 mt-1" action="{{ request.get_full_path }}" data-method="OPTIONS">
+                          <button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Make an OPTIONS request on the {{ name }} resource">OPTIONS</button>
+                        </form>
+                      {% endif %}
+                      {% if 'GET' in allowed_methods %}
+                        <form id="get-form" class="ml-2 mt-1">
+                          <fieldset>
+                          {% if api_settings.URL_FORMAT_OVERRIDE %}
+                            <div class="mb-2 mr-2 btn-group">
+                                <a class="btn btn-info" data-toggle="tooltip" data-placement="top" href="{{ request.get_full_path }}" rel="nofollow" title="Make a GET request on the {{ name }} resource">GET</a>
+                                <button type="button" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown" class="dropdown-toggle-split dropdown-toggle btn btn-info js-tooltip" data-placement="top" title="Specify a format for the GET request">
+                                  <span class="sr-only" data-toggle="tooltip" title="Test Tooltip"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                {% for format in available_formats %}
+                                  <a class="dropdown-item format-option" data-toggle="tooltip" data-placement="left" href="{% add_query_param request api_settings.URL_FORMAT_OVERRIDE format %}" rel="nofollow" title="Make a GET request on the {{ name }} resource with the format set to `{{ format }}`">{{ format }}</a>
+                                {% endfor %}
+                                </ul>
+                            </div>
+                          {% else %}
+                            <a class="btn btn-primary" data-toggle="tooltip" data-placement="top" href="{{ request.get_full_path }}" rel="nofollow" title="Make a GET request on the {{ name }} resource">GET</a>
+                          {% endif %}
+                          </fieldset>
+                        </form>
+                      {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    {{ description }}
+                    <div class="alert alert-secondary fade show" role="alert">
+                      <pre class="prettyprint"><span class="meta nocode"><b>HTTP {{ response.status_code }} {{ response.status_text }}</b>{% for key, val in response_headers|items %}
+<b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize_quoted_links }}</span>{% endfor %}</span></pre>
+                      <pre>{{ content|urlize_quoted_links }}</pre>
+                    </div>
+                    {% if paginator %}
+                      {% get_pagination_html paginator %}
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 {% endblock content %}
+{% block modal %}
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h6 class="text-center">Are you sure you want to delete this {{ name }}?</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <form class="button-form" action="{{ request.get_full_path }}" data-method="DELETE">
+          <button type="button" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock modal %}

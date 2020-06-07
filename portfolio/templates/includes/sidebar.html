@@ -34,10 +34,15 @@
               <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading">Dashboard</li>
                 <li>
-                  <a href="{% url 'projects:project-list' %}" class="mm-active">
+                  <a href="{% url 'projects:project-list' %}"><!--class="mm-active">-->
                     <i class="metismenu-icon pe-7s-box2"></i>Projects
                   </a>
                 </li>
+                <li>
+                  <a href="/api/v1/projects">
+                    <i class="metismenu-icon pe-7s-server"></i>REST APIs
+                  </a>
+                </li>                
               </ul>
             </div>
           </div>
