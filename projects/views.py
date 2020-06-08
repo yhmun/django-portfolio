@@ -14,3 +14,8 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class ProjectListView(generic.ListView):
     model = Project
     template_name = 'projects/project-list.html'
+
+
+class ProjectDetailView(generic.DetailView):
+    model = Project
+    template_name = 'projects/project-detail.html'

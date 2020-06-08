@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} Project {% endblock title %} 
+{% block app_content %}
+          <div class="app-main__inner">
+            <div class="app-page-title">
+              <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                  <div class="font-icon-wrapper font-icon-lg">
+                    <i class="fas fa-parking icon-gradient bg-ripe-malin"></i>
+                  </div>
+                  <div>
+                    {{ project.title }}
+                    <div class="page-title-subheading">
+                      {{ project.description }}
+                      <div><small>{{ project.framework }}</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                  <div class="card card-shadow-info border border-info">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <img class="card-img-top embed-responsive-item" src="{{ project.image.url }}" alt="Card image">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+{% endblock app_content %}

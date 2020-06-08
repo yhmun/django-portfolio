@@ -35,17 +35,17 @@
                 <li class="app-sidebar__heading">Dashboard</li>
                 <li>
                   <a href="{% url 'main:index' %}" class="text-info"><!--class="mm-active">-->
-                    <i class="metismenu-icon pe-7s-home"></i>Home
+                    <i class="metismenu-icon fa fa-home"></i>Home
                   </a>
                 </li>
                 <li>
                   <a href="{% url 'projects:project-list' %}" class="text-info">
-                    <i class="metismenu-icon pe-7s-box2"></i>Projects
+                    <i class="metismenu-icon fa fa-list"></i>Projects
                   </a>
                 </li>
                 <li>
                   <a href="#" class="text-info">
-                    <i class="metismenu-icon pe-7s-server"></i>REST APIs
+                    <i class="metismenu-icon fas fa-font"></i>REST APIs
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                   </a>
                   <ul>
@@ -64,24 +64,24 @@
                 {% if user.is_authenticated %}
                 <li>
                   <a href="{% url 'main:logout' %}" class="text-info">
-                    <i class="metismenu-icon pe-7s-power"></i>Logout
+                    <i class="metismenu-icon fas fa-power-off"></i>Logout
                   </a>
                 </li>
                 {% else %}
                 <li>
                   <a href="{% url 'main:register' %}" class="text-info">
-                    <i class="metismenu-icon pe-7s-add-user"></i>Register
+                    <i class="metismenu-icon fas fa-user-plus"></i>Register
                   </a>
                 </li>
                 <li>
                   <a href="{% url 'main:login' %}" class="text-info">
-                    <i class="metismenu-icon pe-7s-user"></i>Login
+                    <i class="metismenu-icon fas fa-user-lock"></i>Login
                   </a>
                 </li>
                 {% endif %}
                 <li>
                   <a href="/admin" class="text-info">
-                    <i class="metismenu-icon pe-7s-shield"></i>Admin
+                    <i class="metismenu-icon fas fa-user-cog"></i>Admin
                   </a>
                 </li>
               </ul>
