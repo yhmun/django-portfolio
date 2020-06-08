@@ -32,19 +32,19 @@
           <div class="app-header-left">
             <ul class="header-menu nav">
               <li class="btn-group nav-item">
-                <a href="{% url 'main:index' %}" class="nav-link">
-                  <i class="nav-link-icon fa fa-home"></i>Home
+                <a href="{% url 'main:index' %}" class="nav-link text-info">
+                  <i class="nav-link-icon fa fa-home text-info"></i>Home
                 </a>
               </li>
               <li class="btn-group nav-item">
-                <a href="{% url 'projects:project-list' %}" class="nav-link">
-                  <i class="nav-link-icon fa fa-cube"></i>Projects
+                <a href="{% url 'projects:project-list' %}" class="nav-link text-info">
+                  <i class="nav-link-icon fa fa-cube text-info"></i>Projects
                 </a>
               </li>
-              <li class="btn-group nav-item">
+              <li class="btn-group nav-item text-info">
                 <div class="btn-group">
-                  <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="nav-link-icon fa fa-database"></i>REST APIs
+                  <a class="nav-link text-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="nav-link-icon fa fa-database text-info"></i>REST APIs
                   </a>
                   <ul class="dropdown-menu">
                     <a class="dropdown-item" href="/api/v1">API Root</a>
@@ -55,6 +55,22 @@
             </ul>
           </div>
           <div class="app-header-right">
+            <ul class="header-menu nav">
+              {% if user.is_authenticated %}
+                <li class="btn-group nav-item">
+                  <a class="nav-link btn btn-outline-danger text-dark" href="{% url 'main:logout' %}">
+                    <i class="nav-link-icon fa fa-power-off text-dark"></i>Logout
+                  </a>
+                </li>
+              {% else %}
+                <li class="btn-group nav-item">
+                  <a class="nav-link btn btn-outline-warning text-info" href="{% url 'main:login' %}">
+                    <i class="nav-link-icon fa fa-user text-info"></i>Login
+                  </a>
+                </li>
+              {% endif %}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
