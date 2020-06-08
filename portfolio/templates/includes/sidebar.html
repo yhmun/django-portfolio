@@ -69,8 +69,13 @@
                 </li>
                 {% else %}
                 <li>
+                  <a href="{% url 'main:register' %}" class="text-info">
+                    <i class="metismenu-icon pe-7s-add-user"></i>Register
+                  </a>
+                </li>
+                <li>
                   <a href="{% url 'main:login' %}" class="text-info">
-                    <i class="metismenu-icon pe-7s-door-lock"></i>Login
+                    <i class="metismenu-icon pe-7s-user"></i>Login
                   </a>
                 </li>
                 {% endif %}

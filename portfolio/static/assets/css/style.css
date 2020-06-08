@@ -15131,7 +15131,7 @@ a.badge-alternate:focus {
 }
 
 .card .card-footer {
-    display: flex;
+    /* display: flex; */
     align-items: center
 }
 
