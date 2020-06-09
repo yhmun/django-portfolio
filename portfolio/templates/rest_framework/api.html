@@ -122,7 +122,7 @@
                     <pre class="alert alert-info prettyprint" aria-label="request info"><b>{{ request.method }}</b> {{ request.get_full_path }}</pre>
                     <pre class="alert alert-warning prettyprint"><span class="meta nocode"><b>HTTP {{ response.status_code }} {{ response.status_text }}</b>{% for key, val in response_headers|items %}
 <b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize_quoted_links }}</span>{% endfor %}</span></pre>
-                    <pre class="alert alert-secondary prettyprint">{{ content|urlize_quoted_links }}</pre>
+                    <pre class="alert alert-secondary prettyprint" style="white-space: pre-wrap !important;">{{ content|urlize_quoted_links }}</pre>
                     {% if paginator %}
                       {% get_pagination_html paginator %}
                     {% endif %}
