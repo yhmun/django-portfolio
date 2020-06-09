@@ -1,17 +1,33 @@
 from django.views import generic
 from rest_framework import viewsets
-from blog.models import Post, Comment
-from .serializers import PostSerializer
+from . import models
+from . import serializers
+
+class IndexView(generic.ListView):
+    model = models.Post
+    queryset = model.objects.order_by('-created')
+    template_name = 'blog/index.html'
+
+
+class CategoryApiView(viewsets.ModelViewSet):
+    """
+    API endpoint that allows blog's categories to be viewed or edited.
+    """
+    queryset = models.Category.objects.all()
+    serializer_class = serializers.CategorySerializer
+
 
 class PostApiView(viewsets.ModelViewSet):
     """
     API endpoint that allows blog's posts to be viewed or edited.
     """
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    queryset = models.Post.objects.all()
+    serializer_class = serializers.PostSerializer
 
 
-class IndexView(generic.ListView):
-    model = Post
-    queryset = model.objects.order_by('-created')
-    template_name = 'blog/index.html'
+class CommentApiView(viewsets.ModelViewSet):
+    """
+    API endpoint that allows blog's comments to be viewed or edited.
+    """
+    queryset = models.Comment.objects.all()
+    serializer_class = serializers.CommentSerializer
