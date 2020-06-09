@@ -21,7 +21,7 @@
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p style="height: 40px;">{{ project.description }}</p>
                       <div class="col text-right mb-1"><small>{{ project.framework }}</small></div>
-                      <div class="col text-right"><a href="{% url 'projects:project-detail' project.pk %}" class="btn btn-info" style='width: 100px'>Read More</a></div>
+                      <div class="col text-right"><a href="{% url 'projects:detail' project.pk %}" class="btn btn-info" style='width: 100px'>Read More</a></div>
                   </div>
                 </div>
               </div>

@@ -11,11 +11,11 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
 
 
-class ProjectListView(generic.ListView):
+class ProjectIndexView(generic.ListView):
     model = Project
-    template_name = 'projects/project-list.html'
+    template_name = 'projects/index.html'
 
 
 class ProjectDetailView(generic.DetailView):
     model = Project
-    template_name = 'projects/project-detail.html'
+    template_name = 'projects/detail.html'
