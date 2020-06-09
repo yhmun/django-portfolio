@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'main',
     'projects',
+    'blog',
     'rest_framework',
 ]
 
