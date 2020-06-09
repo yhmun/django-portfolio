@@ -31,10 +31,8 @@
                     <i class="fas fa-font icon-gradient bg-arielle-smile"></i>
                   </div>
                   <div>
-                    Django REST Framework
-                    <div class="page-title-subheading">
-                      REST framework provides built-in support for generating OpenAPI schemas, which can be used with tools that allow you to build API documentation.
-                    </div>
+                    <span class="text-uppercase">{{ name }}</span>
+                    <div class="page-title-subheading">{{ description }}</div>
                   </div>
                 </div> <!-- page-title-heading -->
               </div> <!-- page-title-wrapper -->
@@ -42,23 +40,20 @@
 
             <div class="row">
               <div class="col-md-12">
-
-                <nav class="" aria-label="breadcrumb">
-                  <ul class="breadcrumb">
-                  {% for breadcrumb_name, breadcrumb_url in breadcrumblist %}
-                    {% if forloop.last %}
-                    <li class="active breadcrumb-item" aria-current="page">{{ breadcrumb_name }}</li>
-                    {% else %}
-                    <li class="breadcrumb-item"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-                  </ul>
-                </nav> <!-- breadcrumb -->
-
                 <div class="card main-card mb-3">
-                  <div class="card-header">
 
-                    <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>{{ name }}
+                  <div class="card-header">
+                    <nav class="" aria-label="breadcrumb">
+                      <ul class="breadcrumb" style='background: transparent; margin: 0;'>
+                      {% for breadcrumb_name, breadcrumb_url in breadcrumblist %}
+                        {% if forloop.last %}
+                        <li class="active breadcrumb-item" aria-current="page">{{ breadcrumb_name }}</li>
+                        {% else %}
+                        <li class="breadcrumb-item"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                      </ul>
+                    </nav> <!-- breadcrumb -->
 
                     <div class="btn-actions-pane-right">
                       <div class="nav">
@@ -118,7 +113,6 @@
                   </div> <!-- card-head -->
 
                   <div class="card-body">
-                    {{ description }}
                     <pre class="alert alert-info prettyprint" aria-label="request info"><b>{{ request.method }}</b> {{ request.get_full_path }}</pre>
                     <pre class="alert alert-warning prettyprint"><span class="meta nocode"><b>HTTP {{ response.status_code }} {{ response.status_text }}</b>{% for key, val in response_headers|items %}
 <b>{{ key }}:</b> <span class="lit">{{ val|break_long_headers|urlize_quoted_links }}</span>{% endfor %}</span></pre>
@@ -227,7 +221,6 @@
                   </div> <!-- card-body -->
                   {% endif %}
                 </div> <!-- card -->
-
               </div> <!-- col-md-12 -->
             </div> <!-- app-content-body -->
 
