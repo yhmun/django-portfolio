@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from .models import Project
 from .serializers import ProjectSerializer
 
-class ProjectViewSet(viewsets.ModelViewSet):
+class ProjectApiView(viewsets.ModelViewSet):
     """
     API endpoint that allows projects to be viewed or edited.
     """
@@ -11,11 +11,11 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
 
 
-class ProjectIndexView(generic.ListView):
+class IndexView(generic.ListView):
     model = Project
     template_name = 'projects/index.html'
 
 
-class ProjectDetailView(generic.DetailView):
+class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/detail.html'

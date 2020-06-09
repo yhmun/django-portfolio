@@ -10,6 +10,6 @@ router.register(r'projects', views.ProjectViewSet)
 app_name = 'blog'
 urlpatterns = [        
     #path('api/v1/', include(router.urls)),
-    path('blog/', views.BlogIndexView.as_view(), name='index'),
+    path('blog/', views.IndexView.as_view(), name='index'),
     #path('projects/<int:pk>/', views.ProjectDetailView.as_view(), name='project-detail'),
 ]
