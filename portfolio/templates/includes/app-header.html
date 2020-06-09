@@ -27,7 +27,7 @@
               </span>
             </button>
           </span>
-        </div>
+        </div> <!-- app-header logo -->
         <div class="app-header__content">
           <div class="app-header-left">
             <ul class="header-menu nav">
@@ -53,24 +53,23 @@
                 </div>
               </li>
             </ul>
-          </div>
+          </div> <!-- app-header-left -->
           <div class="app-header-right">
             <ul class="header-menu nav">
               {% if user.is_authenticated %}
-                <li class="btn-group nav-item">
-                  <a class="nav-link btn btn-outline-danger text-dark" href="{% url 'main:logout' %}">
-                    <i class="nav-link-icon fas fa-power-off text-warning"></i>Logout
-                  </a>
-                </li>
-              {% else %}
-                <li class="btn-group nav-item">
-                  <a class="nav-link btn btn-outline-warning text-info" href="{% url 'main:login' %}">
-                    <i class="nav-link-icon fas fa-user-lock text-info"></i>Login
-                  </a>
-                </li>
-              {% endif %}
+              <li class="btn-group nav-item">
+                <a class="nav-link btn btn-outline-danger text-dark" href="{% url 'main:logout' %}">
+                  <i class="nav-link-icon fas fa-power-off text-warning"></i>Logout
+                </a>
               </li>
+              {% else %}
+              <li class="btn-group nav-item">
+                <a class="nav-link btn btn-outline-warning text-info" href="{% url 'main:login' %}">
+                  <i class="nav-link-icon fas fa-user-lock text-info"></i>Login
+                </a>
+              </li>
+              {% endif %}
             </ul>
-          </div>
-        </div>
-      </div>
+          </div> <!-- app-header-right -->
+        </div> <!-- app-header content -->
+      </div> <!-- app-header -->

@@ -1,36 +1,30 @@
 {% extends "base.html" %}
-{% block title %} Projects {% endblock title %} 
-{% block app_content %}
-          <div class="app-main__inner">
-            <div class="app-page-title">
-              <div class="page-title-wrapper">
-                <div class="page-title-heading">
-                  <div class="font-icon-wrapper font-icon-lg">
-                    <i class="fa fa-list icon-gradient bg-malibu-beach"></i>
-                  </div>
+{% block title %}Project List{% endblock title %} 
+
+{% block app-content-title-icon-class %}fa fa-list icon-gradient bg-malibu-beach{% endblock %}
+{% block app-content-title-context %}
                   <div>
                     Project List
                     <div class="page-title-subheading">Currently, there are only sample projects.</div>
                   </div>
-                </div>
-              </div>
-            </div>
+{% endblock %}
+
+{% block app-content-body %}
             <div class="row">
               {% for project in object_list %}
-                <div class="col-sm-4 col-md-3 mb-4">                  
-                  <div class="card card-shadow-info border border-info">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <img class="card-img-top embed-responsive-item" src="{{ project.image.url }}" alt="Card image">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">{{ project.title }}</h5>
-                      <p style="height: 40px;">{{ project.description }}</p>                  
-                        <div class="col text-right mb-1"><small>{{ project.framework }}</small></div>
-                        <div class="col text-right"><a href="#" class="btn btn-info" style='width: 100px'>Read More</a></div>                      
-                    </div>
+              <div class="col-sm-4 col-md-3 mb-4">
+                <div class="card card-shadow-info border border-info">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <img class="card-img-top embed-responsive-item" src="{{ project.image.url }}" alt="Card image">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p style="height: 40px;">{{ project.description }}</p>
+                      <div class="col text-right mb-1"><small>{{ project.framework }}</small></div>
+                      <div class="col text-right"><a href="{% url 'projects:project-detail' project.pk %}" class="btn btn-info" style='width: 100px'>Read More</a></div>
                   </div>
                 </div>
+              </div>
               {% endfor %}
-            </div>
-          </div>
-{% endblock app_content %}
+            </div> <!-- app-content-body -->
+{% endblock %}

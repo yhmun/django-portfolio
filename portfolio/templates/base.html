@@ -1,38 +1,63 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Django Application">
-    <meta name="author" content="Mun, Younghwan">
-    <meta name="keyword" content="Django,Bootstrap">
-
-    <title>Hey, CodeGeeks! - {% block title %}{% endblock title %}</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/assets/img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/static/assets/img/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/static/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/assets/css/style.css">
+{% include 'includes/head.html' %}
+    <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
   <body>
+{% block app_container %}
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-{% include 'includes/navbar.html' %}
-{% include 'includes/option.html' %}
+      {% block app-header %}
+{% include 'includes/app-header.html' %}
+      {% endblock app-header %}
+      {% block app-setting %}
+{% include 'includes/app-setting.html' %}
+      {% endblock app-setting %}
+      {% block app-main %}
       <div class="app-main">
-{% include 'includes/sidebar.html' %}
-        <div class="app-main__outer">{% block app_content %}{% endblock app_content %}{% include 'includes/footer.html' %}
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="/static/assets/js/common.js"></script>
-{% block script %}{% endblock script %}
+        {% block app-sidebar %}
+{% include 'includes/app-sidebar.html' %}
+        {% endblock app-sidebar %}
+        {% block app-content %}
+        <div class="app-main__outer">
+          <div class="app-main__inner" style='align-items: stretch'>
+            {% block app-content-title %}
+            <div class="app-page-title">
+              <div class="page-title-wrapper">
+                <div class="page-title-heading">
+
+                  <div class="font-icon-wrapper font-icon-lg">
+                    <i class="{% block app-content-title-icon-class %}fas fa-grin-beam-sweat icon-gradient bg-arielle-smile{% endblock%}"></i>
+                  </div>
+{% block app-content-title-context %}{% endblock %}
+                </div> <!-- page-title-heading -->
+              </div> <!-- page-title-wrapper -->
+            </div> <!-- app-page-title -->
+            {% endblock app-content-title %}
+{% block app-content-body %}{% endblock %}
+
+          </div> <!-- app-main__inner -->
+          {% block app-footer %}
+          <div class="app-wrapper-footer">
+            <div class="app-footer">
+              <div class="app-footer__inner">
+                <div class="app-footer-left">
+{% block app-footer-left %}{% endblock %}
+                </div> <!-- app-footer-left -->
+                <div class="app-footer-right">
+{% include 'includes/app-footer-right.html' %}
+                </div>  <!-- app-footer-right -->
+              </div> <!-- app-footer__inner -->
+            </div> <!-- app-footer -->
+          </div> <!-- app-wrapper-footer -->
+          {% endblock app-footer %}          
+        </div> <!-- app-main__outer -->
+        {% endblock app-content %}
+      </div> <!-- app-main -->
+      {% endblock app-main %}
+    </div> <!-- app-container -->
+    {% endblock app_container %}
+{% include 'includes/scripts.html' %}
+    {% block script %}{% endblock %}
   </body>
 </html>
-{% block modal %}{% endblock modal %}
