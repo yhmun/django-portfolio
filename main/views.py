@@ -9,6 +9,9 @@ from .forms import LoginForm, SignUpForm
 def index(request):
     return render(request, "index.html")
 
+def test(request):
+    return render(request, "test.html")
+
 def error_404(request):
     return render(request, "error-404.html")
 
