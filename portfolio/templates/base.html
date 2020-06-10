@@ -6,7 +6,7 @@
   </head>
   <body>
 {% block app_container %}
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar fixed-footer">
       {% block app-header %}
 {% include 'includes/app-header.html' %}
       {% endblock app-header %}
@@ -50,7 +50,7 @@
               </div> <!-- app-footer__inner -->
             </div> <!-- app-footer -->
           </div> <!-- app-wrapper-footer -->
-          {% endblock app-footer %}          
+          {% endblock app-footer %}
         </div> <!-- app-main__outer -->
         {% endblock app-content %}
       </div> <!-- app-main -->

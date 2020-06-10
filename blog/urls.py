@@ -12,5 +12,5 @@ router.register(r'blog/comments', views.CommentApiView)
 urlpatterns = [
     path('api/v1/', include(router.urls)),
     path('blog/', views.IndexView.as_view(), name='index'),
-    #path('projects/<int:pk>/', views.ProjectDetailView.as_view(), name='project-detail'),
+    path('blog/<int:pk>/', views.DetailView.as_view(), name='detail'),
 ]

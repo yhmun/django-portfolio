@@ -9,6 +9,11 @@ class IndexView(generic.ListView):
     template_name = 'blog/index.html'
 
 
+class DetailView(generic.DetailView):
+    model = models.Post
+    template_name = 'blog/detail.html'
+
+
 class CategoryApiView(viewsets.ModelViewSet):
     """
     API endpoint that allows blog's categories to be viewed or edited.

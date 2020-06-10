@@ -15,7 +15,7 @@
               <div class="col-md-12">
                 <div class="card card-shadow-info border border-success mb-4">
                   <div class="card-header text-capitalize">
-                    <a href="#">{{ post.title }}</a>
+                    <a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a>
                     <div class="btn-actions-pane-right text-right mr-2">
                       <div>
                         <small>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Blog - {{ post.title }}{% endblock title %} 
+
+{% block app-content-title-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
+{% block app-content-title-context %}
+                  <div>
+                    {{ post.title }}
+                    <div class="page-title-subheading">
+                      <div class="page-title-actions">
+                        <small>
+                          {{ post.updated.date }}, Categories:
+                          {% for category in post.categories.all %}
+                          <a href="#">{{ category.name }}</a>
+                          {% endfor %}
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+{% endblock %}
+
+{% block app-content-body %}
+            <div class="card" style='height: 78%; min-height: 400px;'>
+              <div class="col-md-12">
+                  <div class="card-body">
+                    Test
+                  </div>
+              </div>
+            </div> <!-- app-content-body -->
+{% endblock %}
