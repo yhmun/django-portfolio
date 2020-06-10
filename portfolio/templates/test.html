@@ -1,104 +1,150 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">    
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- custom style -->
+    <link rel="stylesheet" href="/static/assets/css/hamburgers.css">
+    <link rel="stylesheet" href="/static/assets/css/my-style.css">
 
-
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
--->
-
-<style>
-  * {
-  margin: 0;
-}
-
-body {
-  color: white;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.wrapper > * {
-  padding: 20px;
-}
-
-.page-header {
-  background: #592E83;
-}
-
-.page-main {
-  flex-grow: 1;
-  background: #331E4D;
-}
-
-.page-footer {
-  background: #9984D4;
-}
-
-
-
-
-</style>
-
-
+    <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
-  <body>
+  <body class="app-container fixed-sidebar fixed-footer fixed-header"> <!-- closed-sidebar   -->
 
-<div style="margin: 10px 10px 10px 10px">
-<div class="wrapper">
-  <header class="page-header">Header</header>
-  <main class="page-main">Main</main>
-  <footer class="page-footer">Footer</footer>
-</div>
-</div>
+    <header class="app-header header-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="app-header__menu">
+        <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+              <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+      <div class="app-header__content">
+        <div class="app-header-left">
+          app-header-left
+        </div>
+        <div class="app-header-right">
+          app-header-right
+        </div>
+      </div>
+    </header>
 
+    <div class="app-sidebar sidebar-shadow">
+      <div class="app-header__logo">
+        <div class="logo-src"></div>
+        <div class="header__pane ml-auto">
+          <div>          
+            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="app-header__mobile-menu">
+        <div>
+          <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="app-header__menu">
+        <span>
+          <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+            <span class="btn-icon-wrapper">
+              <i class="fa fa-ellipsis-v fa-w-6"></i>
+            </span>
+          </button>
+        </span>
+      </div>
+      <div class="scrollbar-sidebar">
+      </div>
+    </div>
 
-    <!-- stuff -->
+    <main class="app-main">
+      <div class="app-main__outer">
+        <div class="app-main__inner">
+        </div>
+        <footer class="app-footer">
+          <div class="app-footer__inner">
+            <div class="app-footer-left">
+              app-footer-left
+            </div>
+            <div class="app-footer-right">
+              app-footer-righ
+            </div>
+          </div>
+        </footer>            
+      </div>
+    </main>
 
-
-    <!-- stuff -->
-
-</section>
 
 
 
 
 <!--
     <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar fixed-footer">
-      <div class="app-main">
-        <div class="app-main__outer">
-          <div class="app-main__inner fill-height-or-more">
+      
+        
+          <div class="app-main__inner">
             <div class="app-page-title">
               <div class="page-title-wrapper">
                 <div class="page-title-heading">
                   <div class="font-icon-wrapper font-icon-lg">
                   </div>
                 </div> 
-              </div>
-            </div>
-          </div> 
+              </div> 
+            </div> 
+
+
+          </div>
           <div class="app-wrapper-footer">
             <div class="app-footer">
               <div class="app-footer__inner">
                 <div class="app-footer-left">
-                </div> 
+
+                </div>
                 <div class="app-footer-right">
-                </div> 
-              </div> 
-            </div>
-          </div> 
-        </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div> 
       </div> 
-    </div> 
-  -->
+    </div>
+-->
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <!-- jquery, popper, bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>
