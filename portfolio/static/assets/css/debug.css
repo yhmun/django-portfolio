@@ -1,0 +1,44 @@
+.app-header {
+    border-style: dashed;
+    border-color: lightsalmon;
+    opacity: 0.7;
+}
+
+.app-header .app-header__content {
+    border-style: dashed;
+    border-color: red;
+    opacity: 0.7;
+}
+
+.app-sidebar {
+    border-style: dashed;
+    border-color: darkorange;
+    opacity: 0.7;
+}
+
+.app-main {
+    border-style: dashed;
+    border-color: deepskyblue;
+    background-color: lightcyan;    
+    opacity: 0.7;
+}
+
+.app-main .app-main__outer {
+    border-style: dashed;
+    border-color: honeydew;
+    background-color: ivory;
+    opacity: 0.7;
+}
+
+.app-main .app-main__inner {
+    border-style: dashed;
+    border-color: violet; 
+    background-color: lightpink;
+    opacity: 0.5;
+}
+
+.app-footer {
+    border-style: dashed;
+    border-color: chocolate; 
+    opacity: 0.7;
+}

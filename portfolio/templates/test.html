@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- font awesome -->
+    <!-- font awesome and bootstrap -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">    
-    <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- custom style -->
+
+    <link rel="stylesheet" href="/static/assets/css/layout.css">
     <link rel="stylesheet" href="/static/assets/css/hamburgers.css">
-    <link rel="stylesheet" href="/static/assets/css/my-style.css">
+    <link rel="stylesheet" href="/static/assets/css/responsive.css">
+    <link rel="stylesheet" href="/static/assets/css/debug.css">
 
     <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
-  <body class="app-container fixed-sidebar fixed-footer fixed-header"> <!-- closed-sidebar   -->
+  <body class="app-container fixed-header fixed-sidebar fixed-footer"> <!-- closed-sidebar   -->
 
     <header class="app-header header-shadow">
       <div class="app-header__logo">
@@ -86,12 +87,17 @@
         </span>
       </div>
       <div class="scrollbar-sidebar">
+        <div class="app-sidebar__inner">
+
+        </div>
       </div>
     </div>
 
     <main class="app-main">
       <div class="app-main__outer">
         <div class="app-main__inner">
+          <div class="app-page-title">
+          </div>
         </div>
         <footer class="app-footer">
           <div class="app-footer__inner">
@@ -106,45 +112,11 @@
       </div>
     </main>
 
-
-
-
-
-<!--
-    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar fixed-footer">
-      
-        
-          <div class="app-main__inner">
-            <div class="app-page-title">
-              <div class="page-title-wrapper">
-                <div class="page-title-heading">
-                  <div class="font-icon-wrapper font-icon-lg">
-                  </div>
-                </div> 
-              </div> 
-            </div> 
-
-
-          </div>
-          <div class="app-wrapper-footer">
-            <div class="app-footer">
-              <div class="app-footer__inner">
-                <div class="app-footer-left">
-
-                </div>
-                <div class="app-footer-right">
-                </div>
-              </div>
-            </div> 
-          </div>
-        </div> 
-      </div> 
-    </div>
--->
-
     <!-- jquery, popper, bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/static/assets/js/app.js"></script>  
   </body>
 </html>
