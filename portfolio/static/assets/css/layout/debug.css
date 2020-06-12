@@ -26,14 +26,13 @@
 .app-main .app-main__outer {
     border-style: dashed;
     border-color: honeydew;
-    background-color: ivory;
     opacity: 0.9;
 }
 
 .app-main .app-main__inner {
     border-style: dashed;
-    border-color: gold; 
-    background-color: lightgoldenrodyellow;
+    border-color: gold;
+    background-color: lightgray;
     opacity: 0.9;
 }
 
@@ -46,7 +45,8 @@
 .app-page-title {
     border-style: dashed;
     border-color: purple; 
-    opacity: 0.9;    
+    background-color: lightyellow;
+    opacity: 0.9;
 }
 
 .app-page-title .page-title-wrapper {
@@ -71,4 +71,18 @@
     border-style: dashed;
     border-color: darkorange; 
     opacity: 0.9;
+}
+
+.app-page-body {
+    border-style: dashed;
+    border-color: blue; 
+    background-color: lightblue;
+    opacity: 0.9;
+}
+
+.app-page-body .page-body-wrapper {
+    border-style: dashed;
+    border-color: pink; 
+    background-color: ivory;
+    opacity: 0.9;    
 }
