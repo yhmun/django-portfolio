@@ -2,65 +2,57 @@
 <html lang="en">
   <head>
 {% include 'includes/head.html' %}
-
-<link rel="stylesheet" href="/static/assets/css/debug.css">
     <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
   <body>
-{% block app_container %}
-    <div class="app-container app-theme-white body-tabs-shadow">
-      {% block app-header %}
-{% include 'includes/app-header.html' %}
-      {% endblock app-header %}
-      {% block app-setting %}
-{% include 'includes/app-setting.html' %}
-      {% endblock app-setting %}
-      {% block app-main %}
-      <div class="app-main">
-        {% block app-sidebar %}
+    <div class="app-container body-tabs-shadow">
+      <!-- begin header -->{% block header %}
+{% include 'includes/app-header.html' %}  
+      {% endblock %}<!-- end header -->
+      <!-- begin main -->{% block main %}
+      <main class="app-main">
+        <!-- begin aside -->{% block aside %}
 {% include 'includes/app-sidebar.html' %}
-        {% endblock app-sidebar %}
-        {% block app-content %}
+        {% endblock %}<!-- end aside -->
         <div class="app-main__outer">
-          <div class="app-main__inner" style='align-items: stretch'>
-            {% block app-content-title %}
-            <div class="app-page-title">
+          <div class="app-main__inner">
+            <!-- begin content -->{% block content %}
+            {% block content-head %}<div class="app-page-title{% block content-head-class %}{% endblock %}">
               <div class="page-title-wrapper">
                 <div class="page-title-heading">
-
-                  <div class="font-icon-wrapper font-icon-lg">
-                    <i class="{% block app-content-title-icon-class %}fas fa-grin-beam-sweat icon-gradient bg-arielle-smile{% endblock%}"></i>
+                  {% block content-head-icon %}<div class="page-title-icon">
+                    <div class="font-icon-wrapper font-icon-lg">
+                      <i class="{% block content-head-icon-class %}fas fa-grin-beam-sweat icon-gradient bg-arielle-smile{% endblock %}"></i>
+                    </div>
+                  </div>{% endblock %}
+                  <div>
+                    {% block content-head-context %}{% endblock %}
                   </div>
-{% block app-content-title-context %}{% endblock %}
-                </div> <!-- page-title-heading -->
-              </div> <!-- page-title-wrapper -->
-            </div> <!-- app-page-title -->
-            {% endblock app-content-title %}
-{% block app-content-body %}{% endblock %}
+                </div>
+              </div>
+            </div>{% endblock %}
+            {% block content-body %}<div class="app-page-body{% block content-body-class %}{% endblock %}">
+              <div class="page-body-wrapper{% block content-body-context-class %}{% endblock %}">
+                {% block content-body-context %}{% endblock %}
+              </div>
+            </div>{% endblock %}
+            {% endblock content %}<!-- end content -->  
+          </div>
+          <!-- begin footer -->{% block footer %}
+          <footer class="app-footer">
+            <div class="app-footer__inner">
+              Footer Test
+            </div>
+          </footer>
+          {% endblock %}<!-- end footer -->
+        </div>
+      </main>
+      {% endblock %}<!-- end main -->
+    </div>
 
-          </div> <!-- app-main__inner -->
-          {% block app-footer %}
-          <div class="app-wrapper-footer">
-            <div class="app-footer">
-              <div class="app-footer__inner">
-                <div class="app-footer-left">
-{% block app-footer-left %}{% endblock %}
-                </div> <!-- app-footer-left -->
-                <div class="app-footer-right">
-{% include 'includes/app-footer-right.html' %}
-                </div>  <!-- app-footer-right -->
-              </div> <!-- app-footer__inner -->
-            </div> <!-- app-footer -->
-          </div> <!-- app-wrapper-footer -->
-          {% endblock app-footer %}
-        </div> <!-- app-main__outer -->
-        {% endblock app-content %}
-      </div> <!-- app-main -->
-      {% endblock app-main %}
-      {% block app-modal %}{% endblock %}
-    </div> <!-- app-container -->
-    {% endblock app_container %}
-{% include 'includes/scripts.html' %}
-    {% block script %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/assets/js/app.js"></script>      
   </body>
 </html>

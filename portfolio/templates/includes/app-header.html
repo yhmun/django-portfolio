@@ -1,11 +1,10 @@
-      <div class="app-header header-shadow">
+      <header class="app-header header-shadow">
         <div class="app-header__logo">
+          <div class="logo-src"></div>
           <div class="header__pane ml-auto">
             <div>
               <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
               </button>
             </div>
           </div>
@@ -13,43 +12,39 @@
         <div class="app-header__mobile-menu">
           <div>
             <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
+              <span class="hamburger-box"><span class="hamburger-inner"></span></span>
             </button>
           </div>
         </div>
         <div class="app-header__menu">
           <span>
             <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-              <span class="btn-icon-wrapper">
-                <i class="fa fa-ellipsis-v fa-w-6"></i>
-              </span>
+              <span class="btn-icon-wrapper"><i class="fa fa-ellipsis-v fa-w-6"></i></span>
             </button>
           </span>
-        </div> <!-- app-header logo -->
+        </div>
         <div class="app-header__content">
           <div class="app-header-left">
             <ul class="header-menu nav">
               <li class="btn-group nav-item">
-                <a href="{% url 'main:index' %}" class="nav-link text-info">
-                  <i class="nav-link-icon fa fa-home text-info"></i>Home
+                <a href="{% url 'main:index' %}" class="nav-link">
+                  <i class="nav-link-icon fa fa-home"></i>Home
                 </a>
               </li>
               <li class="btn-group nav-item">
-                <a href="{% url 'blog:index' %}" class="nav-link text-info">
-                  <i class="nav-link-icon fas fa-pencil-alt text-info"></i>Blog
+                <a href="{% url 'blog:index' %}" class="nav-link">
+                  <i class="nav-link-icon fas fa-pencil-alt"></i>Blog
                 </a>
               </li>
               <li class="btn-group nav-item">
-                <a href="{% url 'projects:index' %}" class="nav-link text-info">
-                  <i class="nav-link-icon fa fa-list text-info"></i>Projects
-                </a>
+                <a href="{% url 'projects:index' %}" class="nav-link">
+                  <i class="nav-link-icon fa fa-list"></i>Projects
+                  </a>
               </li>
-              <li class="btn-group nav-item text-info">
+              <li class="btn-group nav-item">
                 <div class="btn-group">
-                  <a class="nav-link text-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="nav-link-icon fas fa-font text-info"></i>REST APIs
+                  <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="nav-link-icon fas fa-font"></i>REST APIs
                   </a>
                   <ul class="dropdown-menu">
                     <a class="dropdown-item" href="/api/v1">API Root</a>
@@ -57,28 +52,27 @@
                     <a class="dropdown-item" href="/api/v1/blog/categories">Blog:Catergory List</a>
                     <a class="dropdown-item" href="/api/v1/blog/posts">Blog:Post List</a>
                     <a class="dropdown-item" href="/api/v1/blog/comments">Blog:Comment List</a>
-                    <a href="" class="text-info">
-                  </ul>              
+                  </ul>
                 </div>
               </li>
             </ul>
-          </div> <!-- app-header-left -->
+          </div>
           <div class="app-header-right">
             <ul class="header-menu nav">
-              {% if user.is_authenticated %}
+              {% if user.is_authenticated %}<!-- if user.is_authenticated -->
               <li class="btn-group nav-item">
                 <a class="nav-link btn btn-outline-danger text-dark" href="{% url 'main:logout' %}">
                   <i class="nav-link-icon fas fa-power-off text-warning"></i>Logout
                 </a>
               </li>
-              {% else %}
+              {% else %}<!-- if not user.is_authenticated -->
               <li class="btn-group nav-item">
-                <a class="nav-link btn btn-outline-warning text-info" href="{% url 'main:login' %}">
-                  <i class="nav-link-icon fas fa-user-lock text-info"></i>Login
+                <a class="nav-link btn btn-outline-warning" href="{% url 'main:login' %}">
+                  <i class="nav-link-icon fas fa-user-lock"></i>Login
                 </a>
               </li>
-              {% endif %}
+              {% endif %}<!-- endif -->
             </ul>
-          </div> <!-- app-header-right -->
-        </div> <!-- app-header content -->
-      </div> <!-- app-header -->
+          </div>
+        </div>
+      </header>

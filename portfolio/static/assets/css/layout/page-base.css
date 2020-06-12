@@ -1,6 +1,6 @@
 .app-page-title {
-    padding: /*30*/15px;
-    margin: /*-30px -30px 30px*/-20px -20px 20px -20px;
+    /*padding: 30px;
+    margin: -30px -30px 30px;*/
     position: relative
 }
 
@@ -12,6 +12,8 @@
     position: relative;
     display: flex;
     align-items: center
+
+    ; padding: 20px;
 }
 
 .app-page-title .page-title-heading,
@@ -90,16 +92,15 @@
 }
 
 .app-page-body {
-    padding: 15px;
-    margin: -20px;
     position: relative;
-    flex-grow: 1;
+    flex: 1;
     flex-direction: column;
     display: flex
 }
 
 .app-page-body .page-body-wrapper {
     position: relative;
-    flex-grow: 1;
-    align-items: center  
+    flex: 1;
+    padding: 20px;
+    display: flex;
 }

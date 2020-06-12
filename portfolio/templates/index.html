@@ -1,18 +1,11 @@
 {% extends "base.html" %}
-
-{% block app-content-title-icon-class %}fa fa-hammer icon-gradient bg-arielle-smile{% endblock %}
-{% block app-content-title-context %}
-                  <div>
-                    Coming Soon
-                    <div class="page-title-subheading">Website is under construction!</div>
-                  </div>
-{% endblock %}
-
-{% block app-content-body %}
-            <div class="row alert alert-info fade show" style='height: 78%; min-height: 200px;'>
-              <div class="col-md-12 mt-4">
-                <h5>Hey, CodeGeeks!</h5>
-                <p class="mb-0">This website is powered by Django framework and operated by docker containers.</p>
-              </div>
-            </div> <!-- app-content-body -->
-{% endblock %}
+{% block content-head-icon-class %}fa fa-hammer icon-gradient bg-arielle-smile{% endblock %}
+{% block content-head-context %}Coming Soon
+                    <div class="page-title-subheading">
+                      Website is under construction!
+                    </div>{% endblock %}
+{% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
+{% block content-body-context %}<div class="text-center" style="margin: -7rem 0 0">
+                  <h5>Hey, CodeGeeks!</h5>
+                  <p>This website is powered by Django framework and operated by docker containers.</p>
+                </div>{% endblock %}

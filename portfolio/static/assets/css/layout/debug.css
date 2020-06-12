@@ -1,88 +1,79 @@
-.app-header {
+
+/*.app-header {
     border-style: dashed;
     border-color: lightsalmon;
     opacity: 0.7;
-}
+}*/
 
-.app-header .app-header__content {
+/*.app-header .app-header__content {
     border-style: dashed;
     border-color: red;
     opacity: 0.7;
-}
+}*/
 
-.app-sidebar {
+/*.app-sidebar {
     border-style: dashed;
     border-color: darkorange;
     opacity: 0.9;
-}
+}*/
 
-.app-main {
+/*.app-main {
     border-style: dashed;
     border-color: deepskyblue;
-    /*background-color: lightcyan;*/
-    /*opacity: 0.7;*/
-}
+    background-color: lightcyan;
+    opacity: 0.7;
+}*/
 
-.app-main .app-main__outer {
+/*.app-main .app-main__outer {
     border-style: dashed;
     border-color: honeydew;
     opacity: 0.9;
-}
+}*/
 
-.app-main .app-main__inner {
+/*.app-main .app-main__inner {
     border-style: dashed;
     border-color: gold;
     background-color: lightgray;
     opacity: 0.9;
-}
+}*/
 
 .app-footer {
-    border-style: dashed;
-    border-color: chocolate; 
+    background-color: lightcoral; 
     opacity: 0.9;
 }
 
-.app-page-title {
-    border-style: dashed;
-    border-color: purple; 
-    background-color: lightyellow;
+/*.app-page-title {
+    background-color: ivory; 
     opacity: 0.9;
-}
+}*/
 
-.app-page-title .page-title-wrapper {
-    border-style: dashed;
-    border-color: violet; 
+/*.app-page-title .page-title-wrapper {
+    background-color: ivory; 
     opacity: 0.9;
-}
+}*/
 
-.app-page-title .page-title-heading {
-    border-style: dashed;
+/*.app-page-title .page-title-heading {
     border-color: darkblue; 
     opacity: 0.9;
-}
+}*/
 
-.app-page-title .page-title-icon {
-    border-style: dashed;
+/*.app-page-title .page-title-icon {
     border-color: darkorange; 
     opacity: 0.9;
-}
+}*/
 
-.app-page-title .page-title-actions {
-    border-style: dashed;
+/*.app-page-title .page-title-actions {
     border-color: darkorange; 
     opacity: 0.9;
-}
+}*/
 
-.app-page-body {
-    border-style: dashed;
-    border-color: blue; 
-    background-color: lightblue;
+/*.app-page-body {
+    background-color: linen;
     opacity: 0.9;
-}
+}*/
 
-.app-page-body .page-body-wrapper {
-    border-style: dashed;
+/*.app-page-body .page-body-wrapper {
     border-color: pink; 
     background-color: ivory;
-    opacity: 0.9;    
-}
+    opacity: 0.9;
+}*/
