@@ -1,6 +1,6 @@
 .app-page-title {
     padding: /*30*/15px;
-    margin: -30px -30px 30px;
+    margin: /*-30px -30px 30px*/-20px -20px 20px -20px;
     position: relative
 }
 
@@ -87,4 +87,19 @@
 
 .page-title-icon-rounded .page-title-icon {
     border-radius: 50px
+}
+
+.app-page-body {
+    padding: 15px;
+    margin: -20px;
+    position: relative;
+    flex-grow: 1;
+    flex-direction: column;
+    display: flex
+}
+
+.app-page-body .page-body-wrapper {
+    position: relative;
+    flex-grow: 1;
+    align-items: center  
 }
