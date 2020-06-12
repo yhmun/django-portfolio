@@ -10217,6 +10217,9 @@ a.text-alternate:focus {
     visibility: hidden !important
 }
 
+/* Bootstrap End */
+
+
 a,
 button,
 .btn {
@@ -11605,7 +11608,7 @@ button,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /*text-fill-color: transparent*/
+    text-fill-color: transparent
 }
 
 .font-size-xlg {

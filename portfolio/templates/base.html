@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
 {% include 'includes/head.html' %}
+
+<link rel="stylesheet" href="/static/assets/css/debug.css">
     <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
   <body>
 {% block app_container %}
-    <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar fixed-footer">
+    <div class="app-container app-theme-white body-tabs-shadow">
       {% block app-header %}
 {% include 'includes/app-header.html' %}
       {% endblock app-header %}
