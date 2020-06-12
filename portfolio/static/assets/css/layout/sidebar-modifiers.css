@@ -349,5 +349,5 @@
 }
 
 .closed-sidebar.fixed-footer .app-footer__inner {
-    margin-left: 0 !important
+    margin-left: /*0*/80px !important
 }
