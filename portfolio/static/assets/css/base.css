@@ -1,3 +1,4 @@
+/* LAYOUT */
 @import 'layout/generic.css';
 @import 'layout/header-base.css';
 @import 'layout/header-modifiers.css';
@@ -9,7 +10,28 @@
 @import 'layout/page-title.css';
 @import 'layout/search-box.css';
 
+/* UTILS */
+@import 'utils/helpers.css';
+@import 'layout/debug.css';
+
+/* ELEMENTS */
+/*
+@import "elements/buttons";
+@import "elements/dropdown";
+@import "elements/badges";
+@import "elements/cards";
+@import 'elements/tabs.css';
+*/
+/*
+@import "elements/accordions";
+@import "elements/modals";
+@import "elements/navs";
+@import "elements/listgroup";
+@import "elements/forms";
+@import "elements/pagination";
+*/
+
 @import 'custom/hambugers.css';
 
-@import 'layout/debug.css';
+/* Responsive */
 @import 'layout/responsive.css';
