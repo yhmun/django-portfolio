@@ -1,29 +1,53 @@
+/* Extra small devices (portrait phones, less than 576px) */
+.app-page-title {
+    text-align: center
+}
+
+.app-main .app-main__inner {
+    border-style: dashed;
+    border-color: gold; 
+    background-color: lightpink;
+    opacity: 0.9;
+}
+
+.app-page-title .page-title-icon {
+    display: none
+}
+
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     .app-main .app-main__inner {
         border-style: dashed;
         border-color: gold; 
-        background-color: lightseagreen;
+        background-color: lightskyblue;
         opacity: 0.9;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    .app-main .app-main__inner {
-        border-style: dashed;
-        border-color: gold; 
-        background-color: lightslategrey;
-        opacity: 0.9;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 768px) {
     .app-main .app-main__inner {
         border-style: dashed;
         border-color: gold; 
         background-color: lightgoldenrodyellow;
+        opacity: 0.9;
+    }
+
+    .app-page-title {
+        text-align: left
+    }
+
+    .app-page-title .page-title-icon {
+        display: flex;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .app-main .app-main__inner {
+        border-style: dashed;
+        border-color: gold; 
+        background-color: lightseagreen;
         opacity: 0.9;
     }
 }
@@ -37,5 +61,3 @@
         opacity: 0.9;
     }
 }
-
-
