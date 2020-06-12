@@ -66,3 +66,9 @@
     border-color: darkorange; 
     opacity: 0.9;
 }
+
+.app-page-title .page-title-actions {
+    border-style: dashed;
+    border-color: darkorange; 
+    opacity: 0.9;
+}

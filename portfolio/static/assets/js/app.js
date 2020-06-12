@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
     $('.close-sidebar-btn').click(function () {
         var classToSwitch = $(this).attr('data-class');
         var containerElement = '.app-container';
