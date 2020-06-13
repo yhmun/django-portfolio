@@ -1,0 +1,137 @@
+.badge-primary {
+  color: #fff;
+  background-color: #3f6ad8
+}
+
+a.badge-primary:hover,
+a.badge-primary:focus {
+  color: #fff;
+  background-color: #2651be
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d
+}
+
+a.badge-secondary:hover,
+a.badge-secondary:focus {
+  color: #fff;
+  background-color: #545b62
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #3ac47d
+}
+
+a.badge-success:hover,
+a.badge-success:focus {
+  color: #fff;
+  background-color: #2e9d64
+}
+
+.badge-info {
+  color: #fff;
+  background-color: #16aaff
+}
+
+a.badge-info:hover,
+a.badge-info:focus {
+  color: #fff;
+  background-color: #0090e2
+}
+
+.badge-warning {
+  color: #212529;
+  background-color: #f7b924
+}
+
+a.badge-warning:hover,
+a.badge-warning:focus {
+  color: #212529;
+  background-color: #e0a008
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: #d92550
+}
+
+a.badge-danger:hover,
+a.badge-danger:focus {
+  color: #fff;
+  background-color: #ad1e40
+}
+
+.badge-light {
+  color: #212529;
+  background-color: #eee
+}
+
+a.badge-light:hover,
+a.badge-light:focus {
+  color: #212529;
+  background-color: #d5d5d5
+}
+
+.badge-dark {
+  color: #fff;
+  background-color: #343a40
+}
+
+a.badge-dark:hover,
+a.badge-dark:focus {
+  color: #fff;
+  background-color: #1d2124
+}
+
+.badge-focus {
+  color: #fff;
+  background-color: #444054
+}
+
+a.badge-focus:hover,
+a.badge-focus:focus {
+  color: #fff;
+  background-color: #2d2a37
+}
+
+.badge-alternate {
+  color: #fff;
+  background-color: #794c8a
+}
+
+a.badge-alternate:hover,
+a.badge-alternate:focus {
+  color: #fff;
+  background-color: #5c3a69
+}
+
+.badge {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  min-width: 19px
+}
+
+.badge-light {
+  background: #fff
+}
+
+.btn .badge {
+  margin-left: 8px
+}
+
+.btn-sm .badge-pill,
+.btn-group-sm>.btn .badge-pill {
+  position: absolute;
+  top: -4px;
+  right: -4px
+}
+
+.badge-abs {
+  position: absolute;
+  right: -3px;
+  top: -3px
+}

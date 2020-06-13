@@ -27,15 +27,15 @@
 }
 
 .app-header .app-header__content .header-menu .nav-link {
-    color: #6c757d
+    color: /*#6c757d*/#16aaff
 }
 
 .app-header .app-header__content .header-menu .nav-link i {
-    color: #adb5bd
+    color: /*#adb5bd*/#16aaff
 }
 
 .app-header .app-header__content .header-menu .nav-link:hover {
-    color: #212529
+    color: /*#212529*/#0098ef
 }
 
 .app-header .app-header__content .app-header-right {

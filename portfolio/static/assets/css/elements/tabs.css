@@ -1,3 +1,37 @@
+.nav-pills,
+.nav-tabs {
+    margin-bottom: 1rem
+}
+
+.nav-link {
+    font-weight: bold
+}
+
+.nav-link:hover {
+    cursor: pointer
+}
+
+.nav-tabs .nav-link:hover {
+    color: #3f6ad8 !important
+}
+
+.nav-tabs .nav-link.active {
+    color: #3f6ad8
+}
+
+.nav-pills .nav-link:hover {
+    color: #3f6ad8 !important
+}
+
+.nav-pills .nav-link.active {
+    background: #3f6ad8
+}
+
+.nav-pills .nav-link.active:hover {
+    color: #fff !important
+}
+
+/* Tabs animated */
 .tabs-animated .nav-link::before {
     transform: scale(0);
     opacity: 1;

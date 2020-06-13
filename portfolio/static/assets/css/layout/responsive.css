@@ -109,14 +109,15 @@
         display: flex;
         order: 3
     }
-    .app-header.header-text-light .app-header__menu>span .btn,
+    /*.app-header.header-text-light .app-header__menu>span .btn,
     .app-header.header-text-light .app-header__menu>.btn {
         background: rgba(255, 255, 255, 0.1);
         border-color: rgba(255, 255, 255, 0.1)
     }
     .app-header.header-text-light .header-mobile-open {
         background: #343a40
-    }
+    }*/
+
     .popover,
     .dropdown-menu {
         position: fixed !important;
