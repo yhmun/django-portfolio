@@ -13,16 +13,14 @@
   border-top-right-radius: .25rem
 }
 
-.card.text-dark.text-white .card-footer,
-.card.text-dark.text-white .card-header,
-.card.text-white .card-footer,
-.card.text-white .card-header {
+.card .card-footer,
+.card .card-header {
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9)
 }
 
-.card.text-dark.text-white .card-footer,
-.card.text-dark.text-white .card-header {
+.card .card-footer,
+.card .card-header {
   color: rgba(0, 0, 0, 0.9)
 }
 
@@ -57,12 +55,12 @@
 }
 
 .actions-icon-btn .btn-icon-only:hover {
-  color: #3f6ad8
+  color: /*#3f6ad8*/#16aaff
 }
 
 .card-header,
 .card-title {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color: rgba(13, 27, 62, 0.7);
   font-weight: bold;
   font-size: .88rem
@@ -127,7 +125,7 @@
 .card-header>.nav .nav-link::before {
   content: '';
   border-radius: 15px;
-  background: #3f6ad8;
+  background: /*#3f6ad8*/#16aaff;
   transition: all .2s;
   height: 4px;
   width: 100%;
@@ -138,7 +136,7 @@
 }
 
 .card-header>.nav .nav-link:hover {
-  color: #3f6ad8
+  color: /*#3f6ad8*/#0098ef
 }
 
 .card-header>.nav .nav-link.active {

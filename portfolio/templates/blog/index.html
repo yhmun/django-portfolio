@@ -6,11 +6,10 @@
                     <div class="page-title-subheading">
                       This is a simple blog page.
                     </div>{% endblock %}
-
 {% block content-body-context-class %} flex-column{% endblock %}
 {% block content-body-context %}
                 {% for post in object_list %}<div class="card card-shadow-info border border-info my-2">
-                  <div class="card-header text-capitalize">
+                  <div class="card-header">
                     <a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a>
                     <div class="btn-actions-pane-right text-right mr-2">
                       <div>

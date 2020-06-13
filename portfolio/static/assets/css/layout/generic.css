@@ -1,11 +1,465 @@
+.border-primary {
+  border-color: #3f6ad8
+}
+
+.border-secondary {
+  border-color: #6c757d
+}
+
+.border-success {
+  border-color: #3ac47d
+}
+
+.border-info {
+  border-color: #16aaff
+}
+
+.border-warning {
+  border-color: #f7b924
+}
+
+.border-danger {
+  border-color: #d92550
+}
+
+.border-light {
+  border-color: #eee
+}
+
+.border-dark {
+  border-color: #343a40
+}
+
+.border-focus {
+  border-color: #444054
+}
+
+.border-alternate {
+  border-color: #794c8a
+}
+
+.list-group-item-primary {
+  color: #213770;
+  background-color: #c9d5f4
+}
+
+.list-group-item-primary.list-group-item-action:hover,
+.list-group-item-primary.list-group-item-action:focus {
+  color: #213770;
+  background-color: #b4c5f0
+}
+
+.list-group-item-primary.list-group-item-action.active {
+  color: #fff;
+  background-color: #213770;
+  border-color: #213770
+}
+
+.list-group-item-secondary {
+  color: #383d41;
+  background-color: #d6d8db
+}
+
+.list-group-item-secondary.list-group-item-action:hover,
+.list-group-item-secondary.list-group-item-action:focus {
+  color: #383d41;
+  background-color: #c8cbcf
+}
+
+.list-group-item-secondary.list-group-item-action.active {
+  color: #fff;
+  background-color: #383d41;
+  border-color: #383d41
+}
+
+.list-group-item-success {
+  color: #1e6641;
+  background-color: #c8eedb
+}
+
+.list-group-item-success.list-group-item-action:hover,
+.list-group-item-success.list-group-item-action:focus {
+  color: #1e6641;
+  background-color: #b5e8ce
+}
+
+.list-group-item-success.list-group-item-action.active {
+  color: #fff;
+  background-color: #1e6641;
+  border-color: #1e6641
+}
+
+.list-group-item-info {
+  color: #0b5885;
+  background-color: #bee7ff
+}
+
+.list-group-item-info.list-group-item-action:hover,
+.list-group-item-info.list-group-item-action:focus {
+  color: #0b5885;
+  background-color: #a5deff
+}
+
+.list-group-item-info.list-group-item-action.active {
+  color: #fff;
+  background-color: #0b5885;
+  border-color: #0b5885
+}
+
+.list-group-item-warning {
+  color: #806013;
+  background-color: #fdebc2
+}
+
+.list-group-item-warning.list-group-item-action:hover,
+.list-group-item-warning.list-group-item-action:focus {
+  color: #806013;
+  background-color: #fce3a9
+}
+
+.list-group-item-warning.list-group-item-action.active {
+  color: #fff;
+  background-color: #806013;
+  border-color: #806013
+}
+
+.list-group-item-danger {
+  color: #71132a;
+  background-color: #f4c2ce
+}
+
+.list-group-item-danger.list-group-item-action:hover,
+.list-group-item-danger.list-group-item-action:focus {
+  color: #71132a;
+  background-color: #f0acbd
+}
+
+.list-group-item-danger.list-group-item-action.active {
+  color: #fff;
+  background-color: #71132a;
+  border-color: #71132a
+}
+
+.list-group-item-light {
+  color: #7c7c7c;
+  background-color: #fafafa
+}
+
+.list-group-item-light.list-group-item-action:hover,
+.list-group-item-light.list-group-item-action:focus {
+  color: #7c7c7c;
+  background-color: #ededed
+}
+
+.list-group-item-light.list-group-item-action.active {
+  color: #fff;
+  background-color: #7c7c7c;
+  border-color: #7c7c7c
+}
+
+.list-group-item-dark {
+  color: #1b1e21;
+  background-color: #c6c8ca
+}
+
+.list-group-item-dark.list-group-item-action:hover,
+.list-group-item-dark.list-group-item-action:focus {
+  color: #1b1e21;
+  background-color: #b9bbbe
+}
+
+.list-group-item-dark.list-group-item-action.active {
+  color: #fff;
+  background-color: #1b1e21;
+  border-color: #1b1e21
+}
+
+.list-group-item-focus {
+  color: #23212c;
+  background-color: #cbcacf
+}
+
+.list-group-item-focus.list-group-item-action:hover,
+.list-group-item-focus.list-group-item-action:focus {
+  color: #23212c;
+  background-color: #bebdc3
+}
+
+.list-group-item-focus.list-group-item-action.active {
+  color: #fff;
+  background-color: #23212c;
+  border-color: #23212c
+}
+
+.list-group-item-alternate {
+  color: #3f2848;
+  background-color: #d9cdde
+}
+
+.list-group-item-alternate.list-group-item-action:hover,
+.list-group-item-alternate.list-group-item-action:focus {
+  color: #3f2848;
+  background-color: #cdbed4
+}
+
+.list-group-item-alternate.list-group-item-action.active {
+  color: #fff;
+  background-color: #3f2848;
+  border-color: #3f2848
+}
+
+.bg-primary {
+  background-color: #3f6ad8 !important
+}
+
+a.bg-primary:hover,
+a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #2651be !important
+}
+
+.bg-secondary {
+  background-color: #6c757d !important
+}
+
+a.bg-secondary:hover,
+a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #545b62 !important
+}
+
+.bg-success {
+  background-color: #3ac47d !important
+}
+
+a.bg-success:hover,
+a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: #2e9d64 !important
+}
+
+.bg-info {
+  background-color: #16aaff !important
+}
+
+a.bg-info:hover,
+a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: #0090e2 !important
+}
+
+.bg-warning {
+  background-color: #f7b924 !important
+}
+
+a.bg-warning:hover,
+a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: #e0a008 !important
+}
+
+.bg-danger {
+  background-color: #d92550 !important
+}
+
+a.bg-danger:hover,
+a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: #ad1e40 !important
+}
+
+.bg-light {
+  background-color: #eee !important
+}
+
+a.bg-light:hover,
+a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: #d5d5d5 !important
+}
+
+.bg-dark {
+  background-color: #343a40 !important
+}
+
+a.bg-dark:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: #1d2124 !important
+}
+
+.bg-focus {
+  background-color: #444054 !important
+}
+
+a.bg-focus:hover,
+a.bg-focus:focus,
+button.bg-focus:hover,
+button.bg-focus:focus {
+  background-color: #2d2a37 !important
+}
+
+.bg-alternate {
+  background-color: #794c8a !important
+}
+
+a.bg-alternate:hover,
+a.bg-alternate:focus,
+button.bg-alternate:hover,
+button.bg-alternate:focus {
+  background-color: #5c3a69 !important
+}
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #3f6ad8;
+  --secondary: #6c757d;
+  --success: #3ac47d;
+  --info: #16aaff;
+  --warning: #f7b924;
+  --danger: #d92550;
+  --light: #eee;
+  --dark: #343a40;
+  --focus: #444054;
+  --alternate: #794c8a;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
+.bg-white {
+  background-color: #fff !important
+}
+
+.bg-transparent {
+  background-color: transparent !important
+}
+
+.border {
+  border: 1px solid #dee2e6 !important
+}
+
+.border-top {
+  border-top: 1px solid #dee2e6 !important
+}
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dee2e6 !important
+}
+
+.border-left {
+  border-left: 1px solid #dee2e6 !important
+}
+
+.border-0 {
+  border: 0 !important
+}
+
+.border-top-0 {
+  border-top: 0 !important
+}
+
+.border-right-0 {
+  border-right: 0 !important
+}
+
+.border-bottom-0 {
+  border-bottom: 0 !important
+}
+
+.border-left-0 {
+  border-left: 0 !important
+}
+
+.border-primary {
+  border-color: #3f6ad8 !important
+}
+
+.border-secondary {
+  border-color: #6c757d !important
+}
+
+.border-success {
+  border-color: #3ac47d !important
+}
+
+.border-info {
+  border-color: #16aaff !important
+}
+
+.border-warning {
+  border-color: #f7b924 !important
+}
+
+.border-danger {
+  border-color: #d92550 !important
+}
+
+.border-light {
+  border-color: #eee !important
+}
+
+.border-dark {
+  border-color: #343a40 !important
+}
+
+.border-focus {
+  border-color: #444054 !important
+}
+
+.border-alternate {
+  border-color: #794c8a !important
+}
+
+.border-white {
+  border-color: #fff !important
+}
+
 body {
   font-size: .88rem;
+  color: #495057;
 }
 
 a,
 button,
 .btn {
   outline: none !important;
+  text-decoration: none !important;
+  color: #16aaff;
+}
+
+a:hover,
+button,
+.btn  {
+  color: #0098ef
 }
 
 .table th,
