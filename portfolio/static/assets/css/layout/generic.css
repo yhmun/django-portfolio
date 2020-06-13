@@ -8,14 +8,45 @@ button,
   outline: none !important;
 }
 
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+@media (min-width: 576px) {
+  .container {
+      max-width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 100% !important;
+  }
+}
+
 .app-container {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
-}
-
-.table th,
-.table td {
-  vertical-align: middle;
 }
