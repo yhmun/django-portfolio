@@ -32,42 +32,42 @@
               <ul class="vertical-nav-menu">
                 <li class="app-sidebar__heading">Dashboard</li>
                 <li>
-                  <a href="{% url 'main:index' %}" class="text-info">
+                  <a href="{% url 'main:index' %}">
                     <i class="metismenu-icon fa fa-home"></i>Home
                   </a>
                 </li>
                 <li>
-                  <a href="{% url 'blog:index' %}" class="text-info">
+                  <a href="{% url 'blog:index' %}">
                     <i class="metismenu-icon fas fa-pencil-alt"></i>Blog
                   </a>
                 </li>
                 <li>
-                  <a href="{% url 'projects:index' %}" class="text-info">
+                  <a href="{% url 'projects:index' %}">
                     <i class="metismenu-icon fa fa-list"></i>Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="text-info">
+                  <a href="#">
                     <i class="metismenu-icon fas fa-font"></i>REST APIs
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                   </a>
                   <ul>
                     <li>
-                      <a href="/api/v1" class="text-info">
+                      <a href="/api/v1">
                         <i class="metismenu-icon"></i>API Root
                       </a>
                     </li>
                     <li>
-                      <a href="/api/v1/projects" class="text-info">
+                      <a href="/api/v1/projects">
                         <i class="metismenu-icon"></i>Project List
                       </a>
-                      <a href="/api/v1/blog/categories" class="text-info">
+                      <a href="/api/v1/blog/categories">
                         <i class="metismenu-icon"></i>Blog:Cartegory List
                       </a>                      
-                      <a href="/api/v1/blog/posts" class="text-info">
+                      <a href="/api/v1/blog/posts">
                         <i class="metismenu-icon"></i>Blog:Post List
                       </a>
-                      <a href="/api/v1/blog/comments" class="text-info">
+                      <a href="/api/v1/blog/comments">
                         <i class="metismenu-icon"></i>Blog:Comment List
                       </a>                      
                     </li>
@@ -75,24 +75,24 @@
                 </li>
                 {% if user.is_authenticated %}<!-- if user.is_authenticated -->
                 <li>
-                  <a href="{% url 'main:logout' %}" class="text-info">
+                  <a href="{% url 'main:logout' %}">
                     <i class="metismenu-icon fas fa-power-off"></i>Logout
                   </a>
                 </li>
                 {% else %}<!-- if not user.is_authenticated -->
                 <li>
-                  <a href="{% url 'main:register' %}" class="text-info">
+                  <a href="{% url 'main:register' %}">
                     <i class="metismenu-icon fas fa-user-plus"></i>Register
                   </a>
                 </li>
                 <li>
-                  <a href="{% url 'main:login' %}" class="text-info">
+                  <a href="{% url 'main:login' %}">
                     <i class="metismenu-icon fas fa-user-lock"></i>Login
                   </a>
                 </li>
                 {% endif %}<!-- endif -->
                 <li>
-                  <a href="/admin" class="text-info">
+                  <a href="/admin">
                     <i class="metismenu-icon fas fa-user-cog"></i>Admin
                   </a>
                 </li>
