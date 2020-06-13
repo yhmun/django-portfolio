@@ -37,10 +37,19 @@
     opacity: 0.9;
 }*/
 
-.app-footer {
+/*.app-footer {
     background-color: lightcoral; 
     opacity: 0.9;
-}
+}*/
+/*.app-footer .app-footer__inner .app-footer-left {
+    background-color: lightcoral; 
+    opacity: 0.9;
+}*/
+
+/*.app-footer .app-footer__inner .app-footer-right {
+    background-color: lightcoral; 
+    opacity: 0.9;
+}*/
 
 /*.app-page-title {
     background-color: ivory; 
