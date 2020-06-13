@@ -28,12 +28,14 @@
     display: flex;
     align-content: center;
     align-items: center
+    ; text-transform: uppercase;
 }
 
 .app-page-title .page-title-subheading {
     padding: 3px 0 0;
     font-size: .88rem;
     opacity: .6
+    ; text-transform: none !important;
 }
 
 .app-page-title .page-title-subheading .breadcrumb {

@@ -3,6 +3,14 @@
 
 {% block head %}
 {% include 'includes/head.html' %}
+    <style>
+      @media (min-width: 992px) {
+        .col-sm-10 {
+            max-width: 100% !important;
+        }
+      }
+    </style>
+
     <title>REST APIs</title>
 {% endblock head %}
 
@@ -135,8 +143,8 @@
                           <fieldset>
                           {% csrf_token %}
                           {{ post_form }}
-                            <div class="form-actions">
-                              <button class="btn btn-info js-tooltip ml-3" title="Make a POST request on the {{ name }} resource">POST</button>
+                            <div class="form-actions text-right">
+                              <button class="btn btn-info js-tooltip mr-3" title="Make a POST request on the {{ name }} resource">POST</button>
                             </div>
                           </fieldset>
                         </form>
@@ -148,8 +156,8 @@
                         <form action="{{ request.get_full_path }}" method="POST" class="form-horizontal">
                           <fieldset>
                             {% include "rest_framework/raw_data_form.html" %}
-                            <div class="form-actions">
-                              <button class="btn btn-info js-tooltip ml-3" title="Make a POST request on the {{ name }} resource">POST</button>
+                            <div class="form-actions text-right">
+                              <button class="btn btn-info js-tooltip mr-3" title="Make a POST request on the {{ name }} resource">POST</button>
                             </div>
                           </fieldset>
                         </form>
@@ -178,8 +186,8 @@
                           <fieldset>
                           {% csrf_token %}
                           {{ put_form }}
-                            <div class="form-actions">
-                              <button class="btn btn-info js-tooltip ml-3" title="Make a PUT request on the {{ name }} resource">PUT</button>
+                            <div class="form-actions text-right">
+                              <button class="btn btn-info js-tooltip mr-3" title="Make a PUT request on the {{ name }} resource">PUT</button>
                             </div>
                           </fieldset>
                         </form>
@@ -191,12 +199,12 @@
                         <form action="{{ request.get_full_path }}" method="PUT" class="form-horizontal">
                           <fieldset>
                             {% include "rest_framework/raw_data_form.html" %}
-                            <div class="form-actions">
+                            <div class="form-actions text-right">
                               {% if raw_data_put_form %}
-                              <button class="btn btn-info js-tooltip ml-3" title="Make a PUT request on the {{ name }} resource">PUT</button>
+                              <button class="btn btn-info js-tooltip mr-3" title="Make a PUT request on the {{ name }} resource">PUT</button>
                               {% endif %}
                               {% if raw_data_patch_form %}
-                              <button class="btn btn-info js-tooltip ml-3" title="Make a PATCH request on the {{ name }} resource" data-method="PATCH">PATCH</button>
+                              <button class="btn btn-info js-tooltip mr-3" title="Make a PATCH request on the {{ name }} resource" data-method="PATCH">PATCH</button>
                               {% endif %}
                             </div>
                           </fieldset>

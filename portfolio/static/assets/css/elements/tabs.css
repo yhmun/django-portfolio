@@ -12,11 +12,11 @@
 }
 
 .nav-tabs .nav-link:hover {
-    color: #3f6ad8 !important
+    color: /*#3f6ad8*/ #0098ef !important
 }
 
 .nav-tabs .nav-link.active {
-    color: #3f6ad8
+    color: /*#3f6ad8*/#16aaff;
 }
 
 .nav-pills .nav-link:hover {
