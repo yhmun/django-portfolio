@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Blog{% endblock title %} 
+{% block title %}Blog List{% endblock title %} 
 {% block content-head-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
-{% block content-head-context %}Blog
+{% block content-head-context %}Blog List
                     <div class="page-title-subheading">
                       This is a simple blog page.
                     </div>{% endblock %}
@@ -24,5 +24,5 @@
                   <div class="card-body">
                     <p>{{ post.body | slice:":400" }}...</p>
                   </div>
-                </div>{% endfor %}
-{% endblock %}
+                </div>
+                {% endfor %}{% endblock %}

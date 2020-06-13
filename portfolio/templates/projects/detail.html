@@ -1,25 +1,14 @@
 {% extends "base.html" %}
-{% block title %}Project{% endblock title %} 
-
-{% block app-content-title-icon-class %}fas fa-parking icon-gradient bg-ripe-malin{% endblock %}
-{% block app-content-title-context %}
-                  <div>
-                    {{ project.title }}
+{% block title %}Project List{% endblock title %} 
+{% block content-head-icon-class %}fas fa-parking icon-gradient bg-ripe-malin{% endblock %}
+{% block content-head-context %}{{ project.title }}
                     <div class="page-title-subheading">
                       {{ project.description }}
-                      <div><small>{{ project.framework }}</small></div>
-                    </div>
-                  </div>
-{% endblock %}
-
-{% block app-content-body %}
-            <div class="row">
-              <div class="col-md-8">
-                <div class="card card-shadow-info border border-info">
-                  <div class="embed-responsive embed-responsive-16by9">
-                    <img class="card-img-top embed-responsive-item" src="{{ project.image.url }}" alt="Card image">
-                  </div>
-                </div>
-              </div>
-            </div> <!-- app-content-body -->
-{% endblock %}
+                      <div>
+                        <small>{{ project.framework }}</small>
+                      </div>
+                    </div>{% endblock %}
+{% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
+{% block content-body-context %}<div class="text-center" style="margin: -6rem 0 0">
+                  <p>This page is under construction!</p>
+                </div>{% endblock %}
