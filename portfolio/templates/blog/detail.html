@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Blog - {{ post.title }}{% endblock title %} 
+{% block title %}Blog - {{ post.title }}{% endblock title %}
+
 {% block content-head-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
 {% block content-head-context %}{{ post.title }}
                     <div class="page-title-subheading">
@@ -10,6 +11,7 @@
                         </small>
                       </div>
                     </div>{% endblock %}
+
 {% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
 {% block content-body-context %}<div class="text-center" style="margin: -6rem 0 0">
                   <p>This page is under construction!</p>

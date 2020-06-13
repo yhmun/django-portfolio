@@ -1,10 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Project List{% endblock title %} 
+{% block title %}Project List{% endblock title %}
+
 {% block content-head-icon-class %}fa fa-list icon-gradient bg-malibu-beach{% endblock %}
 {% block content-head-context %}Project List
                     <div class="page-title-subheading">
                       Currently, there are only sample projects.
                     </div>{% endblock %}
+
 {% block content-body-context-class %} flex-wrap{% endblock %}
 {% block content-body-context %}
                 {% for project in object_list %}<div class="col-sm-4 col-md-3 my-3">

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Project List{% endblock title %} 
+{% block title %}Project List{% endblock title %}
+
 {% block content-head-icon-class %}fas fa-parking icon-gradient bg-ripe-malin{% endblock %}
 {% block content-head-context %}{{ project.title }}
                     <div class="page-title-subheading">
@@ -8,6 +9,7 @@
                         <small>{{ project.framework }}</small>
                       </div>
                     </div>{% endblock %}
+
 {% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
 {% block content-body-context %}<div class="text-center" style="margin: -6rem 0 0">
                   <p>This page is under construction!</p>

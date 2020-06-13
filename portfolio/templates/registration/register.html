@@ -1,77 +1,69 @@
 {% extends "base.html" %}
 {% block title %}Register{% endblock title %} 
 
-{% block app-content-title-icon-class %}fas fa-user-plus icon-gradient bg-tempting-azure{% endblock %}
-{% block app-content-title-context %}
-                  <div>
-                    Register
-                    <div class="page-title-subheading">Enter your username, email, and password!</div>
-                  </div>
-{% endblock %}
+{% block content-head-icon-class %}fas fa-user-plus icon-gradient bg-tempting-azure{% endblock %}
+{% block content-head-context %}Register
+                    <div class="page-title-subheading">
+                      Enter your username, email, and password!
+                    </div>{% endblock %}
 
-{% block app-content-body %}
-            <div class="row justify-content-center">
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-header">
-                    <strong>Register</strong>
+{% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
+{% block content-body-context %}<div class="col-md-8 mt-n2">
+                  <div class="card">
+                    <div class="card-header">
+                      <strong>Register</strong>
+                    </div>
+                    <div class="card-body">
+                      <form role="form" method="post" action="" class="">
+                        {% csrf_token %}{% if msg %}<div class="alert alert-warning fade show mx-4" role="alert">{{ msg | safe }}</div>{% endif %}
+                        <div class="form-group mx-4">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fa fa-user text-info"></i>
+                              </span>
+                            </div>
+                            {{ form.username }}
+                          </div>
+                        </div>
+                        <div class="form-group mx-4">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fa fa-envelope text-info"></i>
+                              </span>
+                            </div>
+                            {{ form.email }}
+                          </div>
+                        </div>                      
+                        <div class="form-group mx-4">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fa fa-key text-info"></i>
+                              </span>
+                            </div>
+                            {{ form.password1 }}
+                          </div>
+                        </div>
+                        <div class="form-group mx-4">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fa fa-key text-info"></i>
+                              </span>
+                            </div>
+                            {{ form.password2 }}
+                          </div>
+                        </div>                      
+                        <div class="form-group form-actions text-center">
+                          <button class="btn btn-info btn-success px-4 mt-2" type="submit" name="login">Continue</button>
+                        </div>
+                      </form> 
+                    </div>
+                    <div class="card-footer text-center">
+                      <p class="mt-2">Do you have an account?</p>
+                      <a class="btn btn-success px-4 mb-3" href="{% url 'main:login' %}">Login</a>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <form role="form" method="post" action="" class="">
-                    {% csrf_token %}
-                    {% if msg %}
-                      <div class="alert alert-warning fade show mx-4" role="alert">{{ msg | safe }}</div>
-                    {% endif %}
-                      <div class="form-group mx-4">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="fa fa-user text-info"></i>
-                            </span>
-                          </div>
-                          {{ form.username }}
-                        </div>
-                      </div>
-                      <div class="form-group mx-4">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="fa fa-envelope text-info"></i>
-                            </span>
-                          </div>
-                          {{ form.email }}
-                        </div>
-                      </div>                      
-                      <div class="form-group mx-4">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="fa fa-key text-info"></i>
-                            </span>
-                          </div>
-                          {{ form.password1 }}
-                        </div>
-                      </div>
-                      <div class="form-group mx-4">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">
-                              <i class="fa fa-key text-info"></i>
-                            </span>
-                          </div>
-                          {{ form.password2 }}
-                        </div>
-                      </div>                      
-                      <div class="form-group form-actions text-center">
-                        <button class="btn btn-info btn-success px-4 mt-2" type="submit" name="login">Continue</button>
-                      </div>
-                    </form> 
-                  </div>
-                  <div class="card-footer text-center">
-                    <p class="mt-2">Do you have an account?</p>
-                    <a class="btn btn-success px-4 mb-3" href="{% url 'main:login' %}">Login</a>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- app-content-body -->
-{% endblock %}
+                </div>{% endblock %}

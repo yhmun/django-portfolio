@@ -1,10 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Blog List{% endblock title %} 
+{% block title %}Blog List{% endblock title %}
+
 {% block content-head-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
 {% block content-head-context %}Blog List
                     <div class="page-title-subheading">
                       This is a simple blog page.
                     </div>{% endblock %}
+
 {% block content-body-context-class %} flex-column{% endblock %}
 {% block content-body-context %}
                 {% for post in object_list %}<div class="card card-shadow-info border border-info my-2">
