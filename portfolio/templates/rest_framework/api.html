@@ -6,15 +6,15 @@
     <title>REST APIs</title>
 {% endblock head %}
 
-{% block bodyclass %}app-container body-tabs-shadow fixed-header fixed-sidebar{% endblock %}
-
-{% block navbar %}
-{% include 'includes/navbar.html' %}
-{% endblock navbar %}
-
+{% block bodyclass %}{% endblock %}
+{% block navbar %}{% endblock navbar %}
 {% block breadcrumbs %}{% endblock breadcrumbs %}
 
 {% block content %}
+    <div class="app-container body-tabs-shadow fixed-header fixed-sidebar">  
+      <!-- begin header -->{% block header %}
+      {% include 'includes/navbar.html' %}
+      {% endblock %}<!-- end header -->
       <!-- begin main -->
       <main class="app-main">
         <!-- begin aside -->
@@ -235,6 +235,7 @@
         </div>
       </div>
       <!-- end modal -->
+    </div>
 
 {% include 'includes/scripts.html' %}
 {% endblock content %}
