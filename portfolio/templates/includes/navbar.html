@@ -61,14 +61,14 @@
             <ul class="header-menu nav">
               {% if user.is_authenticated %}<!-- if user.is_authenticated -->
               <li class="btn-group nav-item">
-                <a class="nav-link btn btn-outline-danger text-dark" href="{% url 'main:logout' %}">
+                <a class="nav-link btn btn-outline-danger text-danger opacity-8" href="{% url 'main:logout' %}">
                   <i class="nav-link-icon fas fa-power-off text-warning"></i>Logout
                 </a>
               </li>
               {% else %}<!-- if not user.is_authenticated -->
               <li class="btn-group nav-item">
-                <a class="nav-link btn btn-outline-warning" href="{% url 'main:login' %}">
-                  <i class="nav-link-icon fas fa-user-lock"></i>Login
+                <a class="nav-link btn btn-outline-warning text-success opacity-8" href="{% url 'main:login' %}">
+                  <i class="nav-link-icon fas fa-user-lock text-success"></i>Login
                 </a>
               </li>
               {% endif %}<!-- endif -->

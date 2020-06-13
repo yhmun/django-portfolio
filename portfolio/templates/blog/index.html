@@ -1,27 +1,19 @@
 {% extends "base.html" %}
 {% block title %}Blog{% endblock title %} 
-
-{% block app-content-title-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
-{% block app-content-title-context %}
-                  <div>
-                    Blog
-                    <div class="page-title-subheading">This is a simple blog page.</div>
-                  </div>
-{% endblock %}
-
-{% block app-content-body %}
-            <div class="row">
-              {% for post in object_list %}
-              <div class="col-md-12">
-                <div class="card card-shadow-info border border-success mb-4">
+{% block content-head-icon-class %}fas fa-pencil-alt icon-gradient bg-grow-early{% endblock %}
+{% block content-head-context %}Blog
+                    <div class="page-title-subheading">
+                      This is a simple blog page.
+                    </div>{% endblock %}
+{% block content-body-context-class %} flex-column{% endblock %}
+{% block content-body-context %}
+                {% for post in object_list %}<div class="card card-shadow-info border border-info my-2">
                   <div class="card-header text-capitalize">
                     <a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a>
                     <div class="btn-actions-pane-right text-right mr-2">
                       <div>
-                        <small>
-                          {% for category in post.categories.all %}
-                            <a href="#">{{ category.name }}</a>
-                          {% endfor %}
+                        <small>{% for category in post.categories.all %}
+                            <a href="#">{{ category.name }}</a>{% endfor %}
                         </small>
                       </div>
                       <div>
@@ -32,8 +24,5 @@
                   <div class="card-body">
                     <p>{{ post.body | slice:":400" }}...</p>
                   </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div> <!-- app-content-body -->
+                </div>{% endfor %}
 {% endblock %}
