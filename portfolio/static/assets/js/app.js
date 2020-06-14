@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    
     // Bootstrap tooltips.
     $('.js-tooltip').tooltip({
         delay: 1000,
