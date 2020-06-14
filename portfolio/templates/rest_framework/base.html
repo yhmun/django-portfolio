@@ -2,7 +2,8 @@
 {% load i18n %}
 {% load rest_framework %}
 
-{% block css %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" integrity="sha256-IPtNBA1od/cGBfXTxYDxuT5+Y2BKy14o6j0FaIXDmYk=" crossorigin="anonymous" />
+{% block css %}
+    <link rel="stylesheet" href="/static/assets/css/prettify.min.css"/>
     <style>
       @media (min-width: 992px) {
         .col-sm-10 {
@@ -205,19 +206,8 @@
 
 {% block scripts %}
 {% include 'includes/scripts.html' %}
-    <script>
-      window.drf = {
-        csrfHeaderName: "{{ csrf_header_name|default:'X-CSRFToken' }}",
-        csrfToken: "{% if request %}{{ csrf_token }}{% endif %}"
-      };
-    </script>
-    <script src="/static/assets/js/jquery-3.5.1.min.js"></script>
-    <script src="/static/assets/js/popper.min.js"></script>
-    <script src="/static/assets/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/ajax-form.js"></script>
     <script src="/static/assets/js/prettify.min.js"></script>
-    <script src="/static/assets/js/csrf.js"></script>    
-    <script src="/static/assets/js/app.js"></script>    
+    <script src="/static/assets/js/ajax-form.js"></script>
     <script>
       $(document).ready(function() {
         prettyPrint();
