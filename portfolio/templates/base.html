@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
 {% include 'includes/head.html' %}
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="/static/assets/css/base.css">
+
     <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
   <body>
@@ -34,7 +37,7 @@
                 {% block content-body-context %}{% endblock %}
               </div>
             </div>{% endblock %}
-            {% endblock content %}<!-- end content -->  
+            {% endblock %}<!-- end content -->  
           </div>
           <!-- begin footer -->
 {% include 'includes/footer.html' %}
@@ -42,8 +45,11 @@
         </div>
       </main>
       {% endblock %}<!-- end main -->
+      <!-- begin modal -->{% block modal %}
+      {% endblock %}<!-- end modal -->
     </div>
-
-{% include 'includes/scripts.html' %}   
+    <!-- begin scripts -->{% block scripts %}
+{% include 'includes/scripts.html' %}
+    {% endblock %}<!-- end scripts -->
   </body>
 </html>
