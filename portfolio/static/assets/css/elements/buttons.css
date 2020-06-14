@@ -169,7 +169,9 @@ fieldset:disabled a.btn {
 
 .btn-info:focus,
 .btn-info.focus {
-  box-shadow: 0 0 0 0 rgba(57, 183, 255, 0.5)
+  background-color: #0090e2;
+  border-color: #0087d5;
+  box-shadow: 0 0 0 0 /* rgba(57, 183, 255, 0.5)*/rgba(0, 152, 239, 0.5)
 }
 
 .btn-info.disabled,
@@ -190,7 +192,9 @@ fieldset:disabled a.btn {
 .btn-info:not(:disabled):not(.disabled):active:focus,
 .btn-info:not(:disabled):not(.disabled).active:focus,
 .show>.btn-info.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0 rgba(57, 183, 255, 0.5)
+  background-color: #0090e2;
+  border-color: #0087d5;  
+  box-shadow: 0 0 0 0 /*rgba(57, 183, 255, 0.5)*/ rgba(0, 152, 239, 0.5)
 }
 
 .btn-warning {

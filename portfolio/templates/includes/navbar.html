@@ -18,7 +18,7 @@
         </div>
         <div class="app-header__menu">
           <span>
-            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+            <button type="button" class="btn-icon btn-icon-only btn btn-info btn-sm mobile-toggle-header-nav">
               <span class="btn-icon-wrapper"><i class="fa fa-ellipsis-v fa-w-6"></i></span>
             </button>
           </span>
@@ -68,7 +68,7 @@
               {% else %}<!-- if not user.is_authenticated -->
               <li class="btn-group nav-item">
                 <a class="nav-link btn btn-outline-warning text-success opacity-8" href="{% url 'main:login' %}">
-                  <i class="nav-link-icon fas fa-user-lock text-success"></i>Login
+                  <i class="nav-link-icon fas fa-user-lock"></i>Login
                 </a>
               </li>
               {% endif %}<!-- endif -->

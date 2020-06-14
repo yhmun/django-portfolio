@@ -1,8 +1,7 @@
 {% extends "base.html" %}
-{% load rest_framework %}
-{% load static %}
 {% load i18n %}
-<
+{% load rest_framework %}
+
 {% block css %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" integrity="sha256-IPtNBA1od/cGBfXTxYDxuT5+Y2BKy14o6j0FaIXDmYk=" crossorigin="anonymous" />
     <style>
       @media (min-width: 992px) {
@@ -108,7 +107,7 @@
                       {% if post_form %}
                       <div class="tab-pane" id="post-object-form">
                         {% with form=post_form %}
-                        <form class="action="{{ request.get_full_path }}" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate>
+                        <form action="{{ request.get_full_path }}" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate>
                           <fieldset>
                           {% csrf_token %}
                           {{ post_form }}
@@ -151,7 +150,7 @@
                       {% if put_form %}
                       <div class="tab-pane" id="put-object-form">
                         {% with form=post_form %}
-                        <form class="action="{{ request.get_full_path }}" method="PUT" enctype="multipart/form-data" class="form-horizontal" novalidate>
+                        <form action="{{ request.get_full_path }}" method="PUT" enctype="multipart/form-data" class="form-horizontal" novalidate>
                           <fieldset>
                           {% csrf_token %}
                           {{ put_form }}
