@@ -32,7 +32,7 @@
                         {% else %}<li class="breadcrumb-item"><a href="{{ breadcrumb_url }}">{{ breadcrumb_name }}</a></li>{% endif %}{% endfor %}
                       </ul>
                     </nav>
-                    <div class="btn-actions-pane-right mr-2">
+                    <div class="btn-actions-pane-right mr-3">
                       <div class="d-flex flex-row-reverse">
                         {% if 'GET' in allowed_methods %}
                           <form id="get-form">
@@ -225,4 +225,3 @@
     </script>
     <script type="text/javascript" src="/static/assets/js/app.js"></script>
     {% endblock %}
-      
