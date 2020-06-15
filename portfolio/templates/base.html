@@ -3,12 +3,12 @@
   <head>
 {% include 'includes/head.html' %}
     {% block css %}{% endblock %}
-    <link rel="stylesheet" href="/static/assets/css/base.min.css">
+    <link rel="stylesheet" href="/static/assets/css/base.css">
 
     <title>{% block title %}Hey, CodeGeeks!{% endblock title %}</title>
   </head>
   <body>
-    <div class="app-container body-tabs-shadow fixed-header">
+    <div class="app-container body-tabs-shadow fixed-header fixed-sidebar">
       <!-- begin header -->{% block header %}
 {% include 'includes/navbar.html' %}
       {% endblock %}<!-- end header -->

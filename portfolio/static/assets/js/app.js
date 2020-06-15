@@ -1,4 +1,28 @@
 $(document).ready(function () {
+
+    setTimeout(function () {
+        if ($(".scrollbar-container")[0]) {
+            $('.scrollbar-container').each(function () {
+                const ps = new PerfectScrollbar($(this)[0], {
+                    wheelSpeed: 2,
+                    wheelPropagation: false,
+                    minScrollbarLength: 20
+                });
+            });
+        }
+
+        if ($(".scrollbar-sidebar")[0]) {
+            $('.scrollbar-sidebar').each(function () {
+                const ps = new PerfectScrollbar($(this)[0], {
+                    wheelSpeed: 2,
+                    wheelPropagation: false,
+                    minScrollbarLength: 20
+                });
+                console.log("test");
+            });
+        }
+    }, 1000);
+
     // Bootstrap tooltips.
     $('.js-tooltip').tooltip({
         delay: 1000,
