@@ -71,7 +71,7 @@
 }
 
 .vertical-nav-menu li.mm-active>a i.metismenu-state-icon {
-    transform: rotate(-180deg)
+    transform: rotate(-90deg)
 }
 
 .vertical-nav-menu li a.mm-active {
@@ -80,19 +80,24 @@
     font-weight: bold
 }
 
-.vertical-nav-menu i.metismenu-state-icon,
+.vertical-nav-menu i.metismenu-state-icon, 
 .vertical-nav-menu i.metismenu-icon {
-    text-align: center;
-    width: /*34px*/25px;
-    height: /*34px*/25px;
+    text-align: center;    
     line-height: 34px;
     position: absolute;
     left: 3px;
     top: 50%;
     margin-top: -17px;
-    font-size: 1.2rem;
-    opacity: /*.3*/0.4;
+    margin-left: 7px;
+    font-size: 1.1rem;
+    opacity: 0.3;
     transition: color 300ms
+}
+
+.vertical-nav-menu i.metismenu-state-icon {
+    margin-right: 15px;
+    font-size: 0.88rem;
+    opacity: 0.3;
 }
 
 .vertical-nav-menu i.metismenu-state-icon {
@@ -213,7 +218,7 @@
 .closed-sidebar .app-sidebar .app-sidebar__inner .metismenu-icon {
     text-indent: 0;
     left: 50%;
-    margin-left: -17px
+    margin-left: -9px
 }
 
 .closed-sidebar .app-sidebar .app-sidebar__inner .metismenu-state-icon {

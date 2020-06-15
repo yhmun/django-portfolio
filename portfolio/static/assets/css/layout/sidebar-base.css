@@ -9,7 +9,7 @@
     margin-top: -60px;
     padding-top: 60px;
     transition: all .2s
-    ; background: #fafbfc
+    ; background: /*#fafbfc*/#fff
 }
 
 .app-sidebar .app-sidebar__inner {

@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // Sidebar
     setTimeout(function () {
         if ($(".scrollbar-container")[0]) {
             $('.scrollbar-container').each(function () {
@@ -11,17 +12,14 @@ $(document).ready(function () {
             });
         }
 
-        if ($(".scrollbar-sidebar")[0]) {
-            $('.scrollbar-sidebar').each(function () {
-                const ps = new PerfectScrollbar($(this)[0], {
-                    wheelSpeed: 2,
-                    wheelPropagation: false,
-                    minScrollbarLength: 20
-                });
-                console.log("test");
-            });
-        }
-    }, 1000);
+        const ps = new PerfectScrollbar('.scrollbar-sidebar', {
+            wheelSpeed: 2,
+            wheelPropagation: false,
+            minScrollbarLength: 20
+        });
+
+        new MetisMenu(".vertical-nav-menu");
+    }, 100);
 
     // Bootstrap tooltips.
     $('.js-tooltip').tooltip({
