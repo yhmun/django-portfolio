@@ -262,16 +262,6 @@
     .app-page-title .page-title-subheading {
         font-size: .77rem;
     }
-    .card-header {
-        /*height: auto;
-        display: block;
-        padding: .75rem 1.5rem;
-        text-align: center*/
-        height: 3rem;        
-    }
-    .card-footer {
-        height: 3rem;
-    }
     /*body .card-header .btn-actions-pane-right {
         padding: .75rem 0 0
     }*/
@@ -326,3 +316,27 @@
         margin-top: 1rem
     }
 }*/
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100% !important;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+        max-width: 100% !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+        max-width: 100% !important;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+        max-width: 100% !important;
+    }
+  }

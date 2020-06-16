@@ -6,24 +6,26 @@
                     <div class="page-title-subheading">
                       This is a simple blog page.
                     </div>{% endblock %}
-{% block content-body-context-class %} flex-column{% endblock %}
-{% block content-body-context %}
-                {% for post in object_list %}<div class="card card-shadow-info border border-info my-2">
-                  <div class="card-header">
-                    <a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a>
-                    <div class="btn-actions-pane-right text-right mr-2">
-                      <div>
-                        <small>{% for category in post.categories.all %}
+{% block content-body-context-class %} justify-content-center align-items-center{% endblock %}
+{% block content-body-context %}<div class="col-sm-12 col-md-10">
+                  {% for post in object_list %}
+                  <div class="card card-shadow-info border border-info my-2">
+                    <div class="card-header">
+                      <a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a>
+                      <div class="btn-actions-pane-right text-right mr-2">
+                        <div>
+                          <small>{% for category in post.categories.all %}
                             <a href="#">{{ category.name }}</a>{% endfor %}
-                        </small>
-                      </div>
-                      <div>
-                        <small>{{ post.updated.date }}</small>
+                          </small>
+                        </div>
+                        <div>
+                          <small>{{ post.updated.date }} {{ post.updated.time }}</small>
+                        </div>
                       </div>
                     </div>
+                    <div class="card-body">
+                      <p>{{ post.body | slice:":400" }}</p>
+                    </div>
                   </div>
-                  <div class="card-body">
-                    <p>{{ post.body | slice:":400" }}...</p>
-                  </div>
-                </div>
-                {% endfor %}{% endblock %}
+                  {% endfor %}
+                </div>{% endblock %}

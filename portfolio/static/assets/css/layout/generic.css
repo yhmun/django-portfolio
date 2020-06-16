@@ -585,7 +585,7 @@ button.bg-alternate:focus {
 
 body {
   font-size: .88rem;
-  color: #495057;
+  color: /*#495057*/ #707070;
 }
 
 a,
@@ -607,6 +607,13 @@ button,
   vertical-align: middle;
 }
 
+form.d-label label {
+  display: none;
+}
+
+.form-control {
+  font-size: .88rem;
+}
 
 .tooltip-inner{
   background:#fff;
@@ -626,30 +633,6 @@ button,
   padding-left: 0 !important;
   margin-right: 0 !important;
   margin-left: 0 !important;
-}
-
-@media (min-width: 576px) {
-  .container {
-      max-width: 100% !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-      max-width: 100% !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-      max-width: 100% !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-      max-width: 100% !important;
-  }
 }
 
 .app-container {

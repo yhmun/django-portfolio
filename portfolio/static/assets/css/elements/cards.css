@@ -16,13 +16,13 @@
 .card .card-footer,
 .card .card-header {
   background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.9)
+  /*color: rgba(255, 255, 255, 0.9)*/
 }
 
-.card .card-footer,
+/*.card .card-footer,
 .card .card-header {
   color: rgba(0, 0, 0, 0.9)
-}
+}*/
 
 .card .card-footer {
   /* display: flex; */

@@ -27,6 +27,7 @@
 @import "elements/forms.css";
 @import "elements/pagination.css";
 @import "elements/widgets.css";
+@import "elements/misc.css";
 
 /* COMPONENTS */
 @import 'components/hambugers.css';

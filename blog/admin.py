@@ -1,11 +1,14 @@
 from django.contrib import admin
-from blog.models import Post, Category
+from . import models
 
-@admin.register(Post)
+@admin.register(models.Post)
 class PostAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Category)
+@admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
     pass
 
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass

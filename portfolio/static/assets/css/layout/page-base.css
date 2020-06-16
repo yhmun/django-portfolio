@@ -34,7 +34,7 @@
 .app-page-title .page-title-subheading {
     padding: 2px 0 0;
     font-size: .88rem;
-    opacity: .6
+    opacity: /*.6*/.9;
     ; text-transform: none !important;
 }
 
