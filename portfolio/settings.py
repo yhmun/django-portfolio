@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'main',
     'projects',
     'blog',
+    'webgl',
     'rest_framework',
 ]
 

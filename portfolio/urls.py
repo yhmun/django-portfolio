@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include("main.urls")),
     path('', include("projects.urls")),
     path('', include("blog.urls")),
+    path('', include("webgl.urls")),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

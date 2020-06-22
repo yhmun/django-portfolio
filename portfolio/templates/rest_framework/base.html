@@ -2,6 +2,8 @@
 {% load i18n %}
 {% load rest_framework %}
 
+{% block title %}REST APIs{% endblock title %}
+
 {% block css %}
     <link rel="stylesheet" href="/static/assets/css/prettify.min.css"/>
     <style>
@@ -206,7 +208,6 @@
       {% endblock %}
 
 {% block scripts %}
-{% include 'includes/scripts.html' %}
     <script src="/static/assets/js/prettify.min.js"></script>
     <script src="/static/assets/js/ajax-form.js"></script>
     <script>

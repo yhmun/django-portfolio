@@ -48,8 +48,8 @@
       <!-- begin modal -->{% block modal %}
       {% endblock %}<!-- end modal -->
     </div>
-    <!-- begin scripts -->{% block scripts %}
+    <!-- begin scripts -->
 {% include 'includes/scripts.html' %}
-    {% endblock %}<!-- end scripts -->
+    {% block scripts %}{% endblock %}<!-- end scripts -->
   </body>
 </html>
