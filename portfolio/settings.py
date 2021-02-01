@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'blog',
     'webgl',
     'rest_framework',
+    'practice_adoptions',
 ]
 
 MIDDLEWARE = [
