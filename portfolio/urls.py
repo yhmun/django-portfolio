@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include("projects.urls")),
     path('', include("blog.urls")),
     path('', include("webgl.urls")),
+    path('', include("practice_adoptions.urls")),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
