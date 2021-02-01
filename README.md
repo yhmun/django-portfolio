@@ -45,7 +45,7 @@ $ docker-compose exec web python manage.py migrate
 ## Getting Started for standalone development
 - Create environmental file
 ```
-$ vi portflio/.env
+$ vi portfolio/.env
 SECRET_KEY=<encripted password>
 DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 DATABASE_URL=postgresql://<postgres>:<password>@localhost:54320/<portfolio>   # Port: 54320
