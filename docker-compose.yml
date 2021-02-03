@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./
+    image: web:custom
+    container_name: web
+    restart: unless-stopped
+    command: python manage.py runserver 0.0.0.0:8000
+    networks:
+      - postgres_network
+    volumes:
+      - static_data:/home/app/web/staticfiles
+      - media_data:/home/app/web/mediafiles
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:13.1-alpine
+    container_name: postgres
+    restart: unless-stopped
+    networks:
+      - postgres_network    
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data/
+    env_file:
+      - .env.dev.postgres
+
+volumes:
+  postgres_data_dev:
+    external: true
+  static_data:
+    external: true
+  media_data:
+    external: true
+
+networks:
+  postgres_network:
+    driver: bridge

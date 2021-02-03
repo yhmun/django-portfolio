@@ -5,12 +5,15 @@
 .env.*
 sftp-config.json
 Dockerfile
+Dockerfile.*
 docker-compose.yml
 docker-compose.*.yml
 db.sqlite3
+LICENSE
+README.md
 __pycache__/
 venv/
-doc/
+docs/
 nginx/
 staticfiles/
 mediafiles/
