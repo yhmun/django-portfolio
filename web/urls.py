@@ -21,7 +21,7 @@ from apps.example_upload import views
 
 urlpatterns = [
     path('example_upload/', views.file_upload, name="example_upload"),
-    path('admin/', admin.web.urls),
+    path('admin/', admin.site.urls),
 ]
 
 if bool(settings.DEBUG):
