@@ -18,7 +18,7 @@ $ docker volume prune
 $ docker network ls
 $ docker network prune
 
-$ docker systedom prune -a
+$ docker system prune -a
 
 $ docker volume inspect postgres_data_prod
 $ docker volume inspect postgres_data_dev
@@ -39,7 +39,7 @@ $ docker-compose exec web python manage.py migrate
 $ docker-compose exec web python manage.py migrate --noinput
 $ docker-compose exec web python manage.py collectstatic --no-input --clear
 $ docker-compose exec postgres psql --username=user --dbname=web_dev
-$ docker-compose exec postgres psql --username= --dbname=web_prod
+$ docker-compose exec postgres psql --username=root --dbname=web_prod
 $ docker-compose exec nginx ls /home/app/web
 
 $ docker-compose -f docker-compose.prod.yml down -v
