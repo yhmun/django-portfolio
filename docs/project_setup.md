@@ -14,4 +14,6 @@ $ pip install -r requirements.txt
 $ django-admin startproject web .
 $ ./manage.py migrate
 $ ./manage.py runserver
+$ mkdir apps/main && django-admin startapp main apps/main
 $ mkdir apps/example_upload && django-admin startapp example_upload apps/example_upload
+
