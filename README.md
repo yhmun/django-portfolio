@@ -1,6 +1,5 @@
-# django-portfolio-2
+# django-portfolio
 Portfolio Website powered by Dockerizing Django with Postgres, Gunicorn, and Nginx
-
 
 ## Copy and edit environmental files for production
 ```
