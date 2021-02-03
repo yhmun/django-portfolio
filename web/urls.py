@@ -1,4 +1,4 @@
-"""site URL Configuration
+"""web URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -21,7 +21,7 @@ from apps.example_upload import views
 
 urlpatterns = [
     path('example_upload/', views.file_upload, name="example_upload"),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.web.urls),
 ]
 
 if bool(settings.DEBUG):
