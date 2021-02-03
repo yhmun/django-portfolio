@@ -8,7 +8,7 @@ def file_upload(request):
         filename = fs.save(file.name, file)
         file_url = fs.url(filename)
         print(file_url)
-        return render(request, "example/upload.html", {
+        return render(request, "example/file_upload.html", {
             "file_url": file_url
             })
-    return render(request, "example/upload.html")
+    return render(request, "example/file_upload.html")

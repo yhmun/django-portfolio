@@ -32,6 +32,7 @@ $ docker-compose down --rmi local
 $ docker-compose build
 $ docker-compose up -d
 $ docker-compose up -d --build
+$ docker-compose up -d --build web
 $ docker-compose logs -f
 $ docker-compose exec web /bin/bash
 $ docker-compose exec web python manage.py createsuperuser
