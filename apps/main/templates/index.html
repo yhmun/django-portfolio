@@ -1,14 +1,26 @@
-<h3>Welcome, Django world!!</h3>
-<hr/>
-<h3>Source at:</h3> 
-<ul>
-    <li>
-        <a href="https://github.com/mcodegeeks/django-portfolio">https://github.com/mcodegeeks/django-portfolio</a>
-    </li>
-</ul>
-<hr/>
-<h3>Django Practice List</h3>
-<ul>
-    <li><a href="{% url 'file_upload:index' %}">File Upload</a></li>
-    <li><a href="{% url 'adoptions:index' %}">Linkedin Learning: Become a Django - Adoptions</a></li>
-</ul>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Django Portfolio Website</h1>
+                <p class="lead text-muted">Hi, my name is Younghwan Mun.<br/>I am currently learning about Django framework.</p>
+                <img src="{% static 'example/jobs/images/me.png' %}" alt="Me" height=300>
+                <p>
+                    <a href="mailto:mcodegeeks@gmail.com" class="btn btn-primary my-2">Email Me</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <p>Practicing examples:</p>
+            <ul>
+                <li><a href="{% url 'adoptions:index' %}">Linkedin Learning: Learning Django</a></li>
+                <li><a href="{% url 'jobs:index' %}">Linkedin Learning: Building a Personal Portfolio with Django</a></li>
+                <li><a href="{% url 'file_upload:index' %}">File Upload</a></li>                
+            </ul>            
+        </div>
+    </div>
+{% endblock %}
