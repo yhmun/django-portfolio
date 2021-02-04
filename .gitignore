@@ -5,6 +5,8 @@ db.sqlite3
 sftp-config.json
 __pycache__/
 venv/
+dumpfiles/
+dumpfiles
 staticfiles/
 staticfiles
 mediafiles/

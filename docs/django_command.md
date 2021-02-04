@@ -51,5 +51,8 @@ $ pip install gunicorn
 $ pip install Pillow
 ```
 
+## backup
+$ python manage.py dumpdata jobs.job > dumpfiles/jobs_job.json
+
 ### examples
 $ python manage.py load_pet_data
