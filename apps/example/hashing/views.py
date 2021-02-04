@@ -1,4 +1,8 @@
 from django.shortcuts import render
+from .forms import HashForm 
 
 def index(request):
-    return render(request, "example/hashing/index.html")
+    form = HashForm()
+    return render(request, "example/hashing/index.html", {
+            'form': form
+        })

@@ -1,1 +1,5 @@
-hashing test
+<form action="{% url 'hashing:index' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input name="submit" type="submit" value="Hash">
+</form>
