@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.main',
     'apps.example.file_upload',
     'apps.example.adoptions',
+    'apps.example.jobs',
 ]
 
 MIDDLEWARE = [

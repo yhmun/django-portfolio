@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('apps.main.urls')),
     path('example/file_upload/', include('apps.example.file_upload.urls')),
     path('example/adoptions/', include('apps.example.adoptions.urls')),
+    path('example/jobs/', include('apps.example.jobs.urls')),
 ]
 
 if bool(settings.DEBUG):
