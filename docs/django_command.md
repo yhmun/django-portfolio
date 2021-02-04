@@ -1,8 +1,9 @@
-## django command
+## django commands
 $ django-admin startproject web .
 $ mkdir -p apps/main && \
     django-admin startapp main apps/main
 $ python manage.py runserver
+$ python manage.py createsuperuser
 
 ### app
 $ mkdir -p apps/example/file_upload && \
