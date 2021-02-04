@@ -84,10 +84,11 @@ DATABASES = {
                                              # "django.db.backends.sqlite3"),
         "NAME": os.environ.get("SQL_DATABASE", "web_dev"),
                                              # os.path.join(BASE_DIR, "db.sqlite3")),
+        "TEST_NAME": os.environ.get("SQL_TEST_DATABASE", "web_test"),
         "USER": os.environ.get("SQL_USER", "user"),
         "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
         "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432"),        
+        "PORT": os.environ.get("SQL_PORT", "5432"),
     }
 }
 
