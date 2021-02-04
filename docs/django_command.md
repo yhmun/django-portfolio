@@ -12,6 +12,8 @@ $ mkdir -p apps/example/adoptions && \
     django-admin startapp adoptions apps/example/adoptions
 $ mkdir -p apps/example/jobs && \
     django-admin startapp jobs apps/example/jobs
+$ mkdir -p apps/example/hashing && \
+    django-admin startapp hashing apps/example/hashing
 
 ### migrations
 $ python manage.py makemigrations <app>
@@ -50,6 +52,9 @@ $ pip install psycopg2-binary
 $ pip install gunicorn
 $ pip install Pillow
 ```
+
+## test
+$ python manage.py test
 
 ## backup
 $ python manage.py dumpdata jobs.job > dumpfiles/jobs_job.json
