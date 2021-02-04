@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MCODEGEEKS.COM</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bootstrap-5.0.0-beta1/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Favicons -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Job Detail</h1>
+                    <p class="lead text-muted">{{ job.summary }}</p>
+                    <img src="{{ job.image.url }}" alt="Me" height=300>
+                    <p>
+                        <a href="{% url 'jobs:index' %}" class="btn btn-primary my-2">Back</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{% static 'bootstrap-5.0.0-beta1/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
+
