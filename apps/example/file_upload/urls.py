@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+app_name = "file_upload"
 urlpatterns = [
-    path('file_upload', views.file_upload, name="file_upload"),
+    path('', views.index, name="index"),
 ]
