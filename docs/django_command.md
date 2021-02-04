@@ -26,5 +26,8 @@ $ python manage.py migrate --fake adoptions zero
 $ python manage.py migrate <app> zero
 $ python manage.py migrate adoptions zero
 
+### staticfiles
+$ python manage.py collectstatic --no-input --clear
+
 ### examples
 $ python manage.py load_pet_data
