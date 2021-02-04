@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.example.file_upload',
     'apps.example.adoptions',
     'apps.example.jobs',
+    'apps.example.hashing',
 ]
 
 MIDDLEWARE = [
