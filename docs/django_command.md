@@ -16,6 +16,8 @@ $ mkdir -p apps/example/hashing && \
     django-admin startapp hashing apps/example/hashing
 $ mkdir -p apps/example/pizza && \
     django-admin startapp pizza apps/example/pizza
+$ mkdir -p apps/example/store && \
+    django-admin startapp store apps/example/store
 
 ### migrations
 $ python manage.py makemigrations <app>
