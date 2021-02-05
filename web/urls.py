@@ -25,6 +25,7 @@ urlpatterns = [
     path('example/adoptions/', include('apps.example.adoptions.urls')),
     path('example/jobs/', include('apps.example.jobs.urls')),
     path('example/hashing/', include('apps.example.hashing.urls')),
+    path('example/pizza/', include('apps.example.pizza.urls')),
 ]
 
 if bool(settings.DEBUG):

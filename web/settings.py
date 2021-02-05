@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'apps.example.adoptions',
     'apps.example.jobs',
     'apps.example.hashing',
+    'apps.example.pizza',
 ]
 
 MIDDLEWARE = [
