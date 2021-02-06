@@ -115,4 +115,6 @@ $ ln -s /Users/yhmun/OneDrive/Volumes/media_data /Users/yhmun/Develop/Django/dja
 ```
 
 ### curl command
-$ curl -X POST http:://localhost:8000/example/store/api/v1/products/create -d price=1.00 -d name='My Product' -d description='Hello World'
+$ curl -X POST http://localhost:8000/example/store/api/v1/products/create -d price=1.00 -d name='My Product' -d description='Hello World'
+$ curl -X POST http://localhost:8000/example/store/api/v1/products/create -d price=1.00 -d name='product to delete' -d description='delete this product'
+$ curl -X DELETE http://localhost:8000/example/store/api/v1/products/7/delete

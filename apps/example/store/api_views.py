@@ -1,11 +1,10 @@
 from rest_framework.exceptions import ValidationError
-from rest_framework.generics import ListAPIView, CreateAPIView
+from rest_framework.generics import ListAPIView, CreateAPIView, DestroyAPIView
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
 from django_filters.rest_framework import DjangoFilterBackend
-from django.utils import timezone
 from .serializers import ProductSerializer
-from .models import Product 
+from .models import Product
 
 class ProductPagination(LimitOffsetPagination):
     default_limit = 10
@@ -25,6 +24,7 @@ class ProductList(ListAPIView):
             return super().get_queryset()
         queryset = Product.objects.all()
         if on_sale.lower() == 'true':
+            from django.utils import timezone
             now = timezone.now()
             return queryset.filter(
                 sale_start__lte=now,
@@ -43,3 +43,15 @@ class ProductCreate(CreateAPIView):
         except ValueError:
             raise  ValidationError({ 'price': 'A vaild number is required' })
         return super().create(request, *args, **kwargs)
+
+class ProductDestory(DestroyAPIView):
+    queryset = Product.objects.all()
+    lookup_field = 'id'
+
+    def delete(self, request, *args, **kwargs):
+        product_id = request.data.get('id')
+        response = super().delete(request, *args, **kwargs)
+        if response.status_code == 204:
+            from django.core.cache import cache
+            cache.delete('product_data_{}'.format(product_id))
+        return response
