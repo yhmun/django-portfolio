@@ -12,6 +12,9 @@ $ docker rmi nginx:custom
 $ docker ps -a
 $ docker rm -f <container_name>
 
+$ docker cp mediafiles web:/home/app/web/
+$ docker rm web:/home/app/web/mediafiles/mediafiles
+
 $ docker volume ls
 $ docker volume prune
 

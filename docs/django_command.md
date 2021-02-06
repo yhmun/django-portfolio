@@ -64,6 +64,7 @@ $ pip install djangorestframework
 
 ## test
 $ python manage.py test
+$ python manage.py test apps.example.store
 
 ## backup
 $ python manage.py dumpdata jobs.job > dumpfiles/jobs_job.json
