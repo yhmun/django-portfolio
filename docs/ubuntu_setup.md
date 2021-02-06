@@ -89,35 +89,30 @@ $ git clone git@github.com:mcodegeeks/django-portfolio-2.git
 
 ### Volume directory
 ```
-sudo rm -rf /var/opt/volumes/postgres_data_prod
-sudo rm -rf /var/opt/volumes/postgres_data_dev
-sudo rm -rf /var/opt/volumes/static_data
-sudo rm -rf /var/opt/volumes/media_data
+$ sudo rm -rf /var/opt/volumes/postgres_data_prod
+$ sudo rm -rf /var/opt/volumes/postgres_data_dev
+$ sudo rm -rf /var/opt/volumes/static_data
+$ sudo rm -rf /var/opt/volumes/media_data
 
-sudo mkdir -p /var/opt/volumes/postgres_data_prod
-sudo mkdir -p /var/opt/volumes/postgres_data_dev
-sudo mkdir -p /var/opt/volumes/static_data
-sudo mkdir -p /var/opt/volumes/media_data
+$ sudo mkdir -p /var/opt/volumes/postgres_data_prod
+$ sudo mkdir -p /var/opt/volumes/postgres_data_dev
+$ sudo mkdir -p /var/opt/volumes/static_data
+$ sudo mkdir -p /var/opt/volumes/media_data
 
-sudo chown -R ubuntu:ubuntu /var/opt/volumes/postgres_data_prod
-sudo chown -R ubuntu:ubuntu /var/opt/volumes/postgres_data_dev
-sudo chown -R ubuntu:ubuntu /var/opt/volumes/static_data
-sudo chown -R ubuntu:ubuntu /var/opt/volumes/media_data
+$ sudo chown -R ubuntu:ubuntu /var/opt/volumes/postgres_data_prod
+$ sudo chown -R ubuntu:ubuntu /var/opt/volumes/postgres_data_dev
+$ sudo chown -R ubuntu:ubuntu /var/opt/volumes/static_data
+$ sudo chown -R ubuntu:ubuntu /var/opt/volumes/media_data
 
-sudo chmod -R 755 /var/opt/volumes/postgres_data_prod
-sudo chmod -R 755 /var/opt/volumes/postgres_data_dev
-sudo chmod -R 755 /var/opt/volumes/static_data
-sudo chmod -R 755 /var/opt/volumes/media_data
+$ sudo chmod -R 755 /var/opt/volumes/postgres_data_prod
+$ sudo chmod -R 755 /var/opt/volumes/postgres_data_dev
+$ sudo chmod -R 755 /var/opt/volumes/static_data
+$ sudo chmod -R 755 /var/opt/volumes/media_data
 
-ln -s /Users/yhmun/OneDrive/Volumes/dump_data /Users/yhmun/Develop/Django/django-portfolio/dumpfiles
-ln -s /Users/yhmun/OneDrive/Volumes/static_data /Users/yhmun/Develop/Django/django-portfolio/staticfiles
-ln -s /Users/yhmun/OneDrive/Volumes/media_data /Users/yhmun/Develop/Django/django-portfolio/mediafiles
+$ ln -s /Users/yhmun/OneDrive/Volumes/dump_data /Users/yhmun/Develop/Django/django-portfolio/dumpfiles
+$ ln -s /Users/yhmun/OneDrive/Volumes/static_data /Users/yhmun/Develop/Django/django-portfolio/staticfiles
+$ ln -s /Users/yhmun/OneDrive/Volumes/media_data /Users/yhmun/Develop/Django/django-portfolio/mediafiles
 ```
 
-
-
-
-
-
-
-
+### curl command
+$ curl -X POST http:://localhost:8000/example/store/api/v1/products/create -d price=1.00 -d name='My Product' -d description='Hello World'
