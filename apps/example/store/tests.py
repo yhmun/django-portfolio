@@ -1,5 +1,7 @@
+import os.path
 from rest_framework.test import APITestCase
 from django.urls import reverse 
+from django.conf import settings
 from .models import Product
 
 class ProductCreateTestCase(APITestCase):
@@ -54,3 +56,28 @@ class ProductUpdateTestCase(APITestCase):
             )
             updated = Product.objects.get(id=product.id)
             self.assertEqual(updated.name, 'New Product')
+
+        def test_upload_product_photo(self):
+            product = Product.objects.first()
+            original_photo = product.photo
+            photo_path = os.path.join(
+                settings.MEDIA_ROOT, 'example/store/products', 'vitamin-iron.jpg'
+            )
+            with open(photo_path, 'rb') as photo_data:
+                response = self.client.patch(
+                    reverse('store:api_products')+'{}/'.format(product.id),
+                    {
+                        'photo': photo_data,
+                    },
+                    format='multipart',
+                )
+            self.assertEqual(response.status_code, 200)
+            self.assertNotEqual(response.data['photo'], original_photo)
+            try:
+                updated = Product.objects.get(id=product.id)
+                expected_photo = os.path.join(
+                    settings.MEDIA_ROOT, 'example/store/products', 'vitamin-iron'
+                )
+                self.assertTrue(updated.photo.path.startswith(expected_photo))
+            finally:
+                os.remove(updated.photo.path)
