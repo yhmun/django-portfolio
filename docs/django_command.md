@@ -50,6 +50,7 @@ psycopg2-binary      2.8.6     psycopg2-binary==2.8.6       psycopg2 - Python-Po
 gunicorn             20.0.4    gunicorn==20.0.4             WSGI HTTP Server for UNIX
 Pillow               8.1.0     Pillow=8.1.0                 Python Imaging Library (Fork) - ImageField
 django-widget-tweaks 1.4.8     django-widget-tweaks=1.4.8   Tweak the form field rendering in templates, not in python-level form definitions.
+djangorestframework  3.12.2    djangorestframework==3.12.2  Web APIs for Django, made easy.
 ```
 ```
 $ pip install django                 
@@ -57,6 +58,7 @@ $ pip install psycopg2-binary
 $ pip install gunicorn
 $ pip install Pillow
 $ pip install django-widget-tweeks
+$ pip install djangorestframework
 ```
 
 ## test
