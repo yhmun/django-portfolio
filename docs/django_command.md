@@ -51,6 +51,7 @@ gunicorn             20.0.4    gunicorn==20.0.4             WSGI HTTP Server for
 Pillow               8.1.0     Pillow=8.1.0                 Python Imaging Library (Fork) - ImageField
 django-widget-tweaks 1.4.8     django-widget-tweaks=1.4.8   Tweak the form field rendering in templates, not in python-level form definitions.
 djangorestframework  3.12.2    djangorestframework==3.12.2  Web APIs for Django, made easy.
+django-filter        2.4.0     django-filter==2.4.0         Django-filter is a reusable Django application for allowing users to filter querysets dynamically.
 ```
 ```
 $ pip install django                 
